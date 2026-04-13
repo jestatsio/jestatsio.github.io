@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description:
     "PhD-led statistics and AI consulting for teams that need trustworthy analysis, practical automation, and systems that hold up in the real world.",
   metadataBase: new URL("https://jestats.io"),
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+  },
   openGraph: {
     title: "J&E Statistical Consulting",
     description:

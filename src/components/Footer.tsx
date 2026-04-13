@@ -1,11 +1,15 @@
+import { LogoMark } from "./LogoMark";
+
 export function Footer() {
   return (
     <footer className="relative border-t border-white/5 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 sm:flex-row">
         <div className="flex items-center gap-2">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-brand-indigo to-brand-purple text-xs font-bold text-white">
-            J&amp;E
-          </span>
+          <LogoMark
+            alt=""
+            size={32}
+            className="h-8 w-8 rounded-lg border border-white/10"
+          />
           <span className="font-display text-sm text-mist-200">
             Statistical Consulting
           </span>

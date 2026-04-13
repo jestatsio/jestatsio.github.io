@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { LogoMark } from "./LogoMark";
 
 const links = [
   { href: "#signals", label: "Signals" },
@@ -21,9 +22,11 @@ export function Nav() {
       <div className="mx-auto max-w-6xl px-6 py-5">
         <div className="flex items-center justify-between rounded-2xl border border-white/5 bg-ink-950/60 px-5 py-3 backdrop-blur-md">
           <a href="#top" className="group flex items-center gap-2">
-            <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-indigo to-brand-purple text-sm font-bold text-white shadow-lg shadow-brand-indigo/20">
-              J&amp;E
-            </span>
+            <LogoMark
+              alt=""
+              size={40}
+              className="h-10 w-10 rounded-xl border border-white/10 shadow-lg shadow-brand-indigo/20"
+            />
             <span className="hidden font-display text-sm font-semibold tracking-tight text-mist-100 sm:inline">
               Statistical Consulting
             </span>

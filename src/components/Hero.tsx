@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { LogoMark } from "./LogoMark";
 
 const pressurePoints = [
   "Dashboards nobody trusts",
@@ -34,9 +35,14 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[0.68rem] uppercase tracking-[0.24em] text-mist-200 backdrop-blur"
+              className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-[0.68rem] uppercase tracking-[0.24em] text-mist-200 backdrop-blur"
             >
-              <span className="inline-flex h-2 w-2 rounded-full bg-brand-violet shadow-[0_0_18px_rgba(139,92,246,0.9)]" />
+              <LogoMark
+                alt=""
+                size={32}
+                priority
+                className="h-8 w-8 rounded-lg border border-white/10"
+              />
               J&amp;E Statistical Consulting
             </motion.div>
 

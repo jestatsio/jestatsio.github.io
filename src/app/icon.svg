@@ -1,0 +1,27 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panel" x1="36" y1="24" x2="212" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10132A" />
+      <stop offset="1" stop-color="#05060F" />
+    </linearGradient>
+    <linearGradient id="accent" x1="48" y1="44" x2="202" y2="198" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" />
+      <stop offset="0.52" stop-color="#8B5CF6" />
+      <stop offset="1" stop-color="#D946EF" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(78 58) rotate(44.4327) scale(182.775)">
+      <stop stop-color="#8B5CF6" stop-opacity="0.38" />
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="256" height="256" rx="64" fill="#05060F" />
+  <rect x="14" y="14" width="228" height="228" rx="50" fill="url(#panel)" stroke="#F5F7FF" stroke-opacity="0.12" />
+  <rect x="14" y="14" width="228" height="228" rx="50" fill="url(#glow)" />
+  <path d="M48 66C48 56.0589 56.0589 48 66 48H124C133.941 48 142 56.0589 142 66V76H98C77.0132 76 60 93.0132 60 114V154C60 174.987 77.0132 192 98 192H118V208H86C64.9086 208 48 191.091 48 170V66Z" fill="url(#accent)" />
+  <circle cx="62" cy="62" r="14" fill="url(#accent)" />
+  <path d="M96 58H122V154C122 170.569 108.569 184 92 184H78V162H88C92.4183 162 96 158.418 96 154V58Z" fill="#F5F7FF" />
+  <path d="M142 66C142 61.5817 145.582 58 150 58H192V80H164V108H188V128H164V156H194V178H150C145.582 178 142 174.418 142 170V66Z" fill="#F5F7FF" />
+  <path d="M168 40L196 68" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" />
+  <circle cx="196" cy="68" r="12" fill="#F5F7FF" />
+</svg>
