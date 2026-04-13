@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 
 const links = [
+  { href: "#signals", label: "Signals" },
   { href: "#services", label: "Services" },
   { href: "#about", label: "About" },
   { href: "#process", label: "Process" },
@@ -25,6 +26,9 @@ export function Nav() {
             </span>
             <span className="hidden font-display text-sm font-semibold tracking-tight text-mist-100 sm:inline">
               Statistical Consulting
+            </span>
+            <span className="hidden font-mono text-[0.62rem] uppercase tracking-[0.24em] text-mist-400 lg:inline">
+              Stats + AI
             </span>
           </a>
           <nav className="hidden items-center gap-7 md:flex">

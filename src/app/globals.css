@@ -38,6 +38,10 @@ body {
 
 body {
   font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at top, rgba(99, 102, 241, 0.18), transparent 28%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.14), transparent 24%),
+    var(--color-ink-950);
 }
 
 ::selection {
@@ -130,6 +134,127 @@ body {
   border-color: rgba(168, 139, 250, 0.35);
 }
 
+.hero-beam {
+  position: absolute;
+  inset: 12% auto auto 52%;
+  width: min(48vw, 40rem);
+  height: min(48vw, 40rem);
+  border-radius: 9999px;
+  background:
+    radial-gradient(circle, rgba(196, 181, 253, 0.14) 0%, rgba(99, 102, 241, 0.1) 30%, transparent 70%);
+  filter: blur(24px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.signal-field {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: 9999px;
+  border: 1px solid rgba(148, 163, 255, 0.14);
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 28%, rgba(5, 6, 15, 0.12) 62%, rgba(5, 6, 15, 0.7) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 40px 80px rgba(3, 6, 20, 0.45);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.signal-field::before {
+  content: "";
+  position: absolute;
+  inset: 10%;
+  border-radius: 9999px;
+  border: 1px dashed rgba(200, 208, 245, 0.1);
+}
+
+.signal-ring,
+.signal-axis {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.signal-ring {
+  border-radius: 9999px;
+  border: 1px solid rgba(200, 208, 245, 0.12);
+}
+
+.signal-ring-sm {
+  width: 34%;
+  height: 34%;
+}
+
+.signal-ring-md {
+  width: 58%;
+  height: 58%;
+}
+
+.signal-ring-lg {
+  width: 82%;
+  height: 82%;
+}
+
+.signal-axis {
+  width: 1px;
+  height: 72%;
+  background: linear-gradient(180deg, transparent, rgba(200, 208, 245, 0.28), transparent);
+}
+
+.signal-axis-b {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.signal-core {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: min(52%, 17rem);
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.22) 0%, rgba(168, 85, 247, 0.08) 45%, rgba(5, 6, 15, 0.1) 100%);
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 0 80px rgba(99, 102, 241, 0.22);
+}
+
+.signal-node {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  transform: translate(-50%, -50%);
+}
+
+.signal-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 9999px;
+  background: var(--color-brand-violet);
+  box-shadow:
+    0 0 0 0.45rem rgba(139, 92, 246, 0.12),
+    0 0 18px rgba(139, 92, 246, 0.8);
+}
+
+.signal-label {
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-mist-200);
+  backdrop-filter: blur(10px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ambient-bg::before,
   .ambient-bg::after {
@@ -137,5 +262,21 @@ body {
   }
   html {
     scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .signal-core {
+    padding: 1.8rem 1.15rem;
+  }
+
+  .signal-node {
+    gap: 0.45rem;
+  }
+
+  .signal-label {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.56rem;
+    letter-spacing: 0.16em;
   }
 }

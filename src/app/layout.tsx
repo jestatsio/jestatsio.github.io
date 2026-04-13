@@ -15,14 +15,14 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "J&E Statistical Consulting — Statistics meets AI",
+  title: "J&E Statistical Consulting — Statistics. AI. No hand-waving.",
   description:
-    "Expert data analysis and AI infrastructure for teams ready to move fast. Led by a PhD statistician and a digital marketing strategist.",
+    "PhD-led statistics and AI consulting for teams that need trustworthy analysis, practical automation, and systems that hold up in the real world.",
   metadataBase: new URL("https://jestats.io"),
   openGraph: {
     title: "J&E Statistical Consulting",
     description:
-      "Expert data analysis and AI infrastructure for teams ready to move fast.",
+      "PhD-led statistics and AI consulting for teams that need trustworthy analysis and working systems.",
     url: "https://jestats.io",
     siteName: "J&E Statistical Consulting",
     type: "website",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "J&E Statistical Consulting",
     description:
-      "Expert data analysis and AI infrastructure for teams ready to move fast.",
+      "PhD-led statistics and AI consulting for teams that need trustworthy analysis and working systems.",
   },
 };
 

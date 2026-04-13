@@ -33,11 +33,11 @@ export function Services() {
           eyebrow="What we do"
           title={
             <>
-              Three things we do{" "}
-              <span className="text-gradient">exceptionally well.</span>
+              What we build once the{" "}
+              <span className="text-gradient">problem is clear.</span>
             </>
           }
-          description="We keep the surface area small on purpose. Deep expertise beats a long menu."
+          description="We keep the menu short on purpose. The work tends to fall into three buckets, and we go deep on each one."
         />
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

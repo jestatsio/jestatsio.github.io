@@ -1,3 +1,4 @@
+import { Attention } from "@/components/Attention";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="relative min-h-screen">
       <Nav />
       <Hero />
+      <Attention />
       <Services />
       <About />
       <Process />
