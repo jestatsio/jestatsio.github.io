@@ -11,10 +11,10 @@ const team = [
     bio: "PhD in Statistics and Computer Science. Eric builds the models, the pipelines, and the AI systems — and makes sure the math underneath is actually sound.",
   },
   {
-    initials: "JC",
-    name: "Jennye Cooper",
+    initials: "J",
+    name: "J",
     role: "Co-founder · Strategy & Growth",
-    bio: "Masters in Digital Marketing. Jennye turns technical capability into business outcomes — positioning, messaging, and the go-to-market motion that makes projects land.",
+    bio: "Masters in Digital Marketing. J turns technical capability into business outcomes — positioning, messaging, and the go-to-market motion that makes projects land.",
   },
 ];
 
