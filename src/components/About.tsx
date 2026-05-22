@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
 const team = [
@@ -60,6 +62,22 @@ export function About() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
+          className="mt-10 text-center"
+        >
+          <Link
+            href="/built"
+            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.22em] text-mist-300 transition-colors hover:text-mist-50"
+          >
+            See what we&apos;ve shipped
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

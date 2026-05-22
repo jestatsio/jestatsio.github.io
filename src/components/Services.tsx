@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { BrainCircuit, LineChart, Wrench } from "lucide-react";
+import { DiagnosticCTA } from "./DiagnosticCTA";
 import { SectionHeading } from "./SectionHeading";
 
 const services = [
@@ -62,6 +63,14 @@ export function Services() {
               </p>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-14">
+          <DiagnosticCTA
+            variant="banner"
+            headline="Not sure where to start? Begin with the diagnostic."
+            subhead="A one-week, fixed-fee audit of your AI or stats work. Written report you can hand to your team — no decks, no proposals."
+          />
         </div>
       </div>
     </section>
