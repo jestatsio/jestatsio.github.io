@@ -44,6 +44,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <head>
+        <script
+          defer
+          data-domain="jestats.io"
+          src="https://plausible.io/js/script.js"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
