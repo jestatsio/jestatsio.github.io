@@ -50,10 +50,10 @@ export function Footer() {
             rights reserved.
           </div>
           <a
-            href="mailto:eric@jestats.io"
+            href="mailto:info@jestats.io"
             className="font-mono text-xs text-mist-400 transition-colors hover:text-mist-200"
           >
-            eric@jestats.io
+            info@jestats.io
           </a>
         </div>
       </div>

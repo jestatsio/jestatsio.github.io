@@ -54,7 +54,7 @@ const localBusinessSchema = {
     addressRegion: "WA",
     addressCountry: "US",
   },
-  email: "eric@jestats.io",
+  email: "info@jestats.io",
   priceRange: "$$",
 };
 
@@ -240,7 +240,7 @@ export default function LakeStevensPage() {
                 </p>
               </div>
               <a
-                href="mailto:eric@jestats.io?subject=Hi%20from%20Lake%20Stevens"
+                href="mailto:info@jestats.io?subject=Hi%20from%20Lake%20Stevens"
                 className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-brand-indigo to-brand-purple px-6 py-3 text-sm font-medium text-white shadow-md shadow-brand-indigo/20 transition-transform hover:scale-[1.03]"
               >
                 Send a quick hello

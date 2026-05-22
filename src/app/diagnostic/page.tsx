@@ -164,7 +164,7 @@ const faqs = [
 function buildMailto(subject: string): string {
   const body =
     "Hi Eric and Jennye,%0D%0A%0D%0AI'd like to book the following diagnostic:%0D%0A%0D%0A- Company:%0D%0A- What we want audited (short description):%0D%0A- Ideal start date:%0D%0A%0D%0AThanks!";
-  return `mailto:eric@jestats.io?subject=${encodeURIComponent(subject)}&body=${body}`;
+  return `mailto:info@jestats.io?subject=${encodeURIComponent(subject)}&body=${body}`;
 }
 
 const accentClasses = {
@@ -407,7 +407,7 @@ export default function DiagnosticPage() {
                 </p>
               </div>
               <a
-                href="mailto:eric@jestats.io?subject=Question%20about%20the%20diagnostic"
+                href="mailto:info@jestats.io?subject=Question%20about%20the%20diagnostic"
                 className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-brand-indigo to-brand-purple px-6 py-3 text-sm font-medium text-white shadow-md shadow-brand-indigo/20 transition-transform hover:scale-[1.03]"
               >
                 <Mail className="h-4 w-4" />

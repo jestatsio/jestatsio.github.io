@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
 import { useState } from "react";
 
-const EMAIL = "eric@jestats.io";
+const EMAIL = "info@jestats.io";
 
 export function Contact() {
   const [name, setName] = useState("");

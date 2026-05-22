@@ -145,7 +145,7 @@ const faqs = [
 function buildMailto(subject: string): string {
   const body =
     "Hi Jennye,%0D%0A%0D%0AI'm interested in the following:%0D%0A%0D%0A- Business name + current website (if any):%0D%0A- What you do:%0D%0A- Anything specific about what you need:%0D%0A%0D%0AThanks!";
-  return `mailto:eric@jestats.io?subject=${encodeURIComponent(subject)}&body=${body}`;
+  return `mailto:info@jestats.io?subject=${encodeURIComponent(subject)}&body=${body}`;
 }
 
 const accentClasses = {
@@ -331,7 +331,7 @@ export default function LocalWebPage() {
                 </p>
               </div>
               <a
-                href="mailto:eric@jestats.io?subject=Quote%20request%20%E2%80%94%20local%20web"
+                href="mailto:info@jestats.io?subject=Quote%20request%20%E2%80%94%20local%20web"
                 className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-brand-indigo to-brand-purple px-6 py-3 text-sm font-medium text-white shadow-md shadow-brand-indigo/20 transition-transform hover:scale-[1.03]"
               >
                 <Mail className="h-4 w-4" />
