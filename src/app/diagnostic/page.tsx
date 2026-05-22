@@ -6,8 +6,10 @@ import {
   ClipboardCheck,
   Clock,
   FileText,
+  Gauge,
   LineChart,
   Mail,
+  MessageCircleReply,
   Wallet,
 } from "lucide-react";
 import { Footer } from "@/components/Footer";
@@ -17,11 +19,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 export const metadata: Metadata = {
   title: "The One-Week Diagnostic — J&E Statistical Consulting",
   description:
-    "A fixed-fee, one-week audit of your AI or statistics work. Written report. No decks. $2,500 flat.",
+    "A fixed-fee, one-week audit of your website, AI, or statistics work. Written report. No decks. Reply within 12 hours. From $1,500.",
   openGraph: {
     title: "The One-Week Diagnostic — J&E Statistical Consulting",
     description:
-      "A fixed-fee, one-week audit of your AI or statistics work. Written report. No decks. $2,500 flat.",
+      "A fixed-fee, one-week audit of your website, AI, or statistics work. Written report. No decks. Reply within 12 hours.",
     url: "https://jestats.io/diagnostic",
     type: "website",
   },
@@ -31,18 +33,37 @@ interface Sku {
   id: string;
   title: string;
   tagline: string;
+  price: string;
   pitch: string;
   icon: typeof BrainCircuit;
-  accent: "indigo" | "violet";
+  accent: "indigo" | "violet" | "blue";
   goodFor: string[];
   mailSubject: string;
 }
 
 const skus: Sku[] = [
   {
+    id: "website",
+    title: "Website Audit",
+    tagline: "For your existing site",
+    price: "$1,500 flat",
+    pitch:
+      "A practical, written review of your existing website. We look at how fast it loads, how well it ranks in search, how clearly it guides visitors toward becoming customers, how it feels on a phone, and the maintenance basics most sites quietly let slip. You get a clear list of what's broken, what's costing you traffic or leads, and exactly what we'd fix first.",
+    icon: Gauge,
+    accent: "blue",
+    goodFor: [
+      "A site that loads slowly and you don't know why",
+      "Plenty of visitors, but very few of them turn into leads",
+      "A WordPress install nobody has touched in two years",
+      "Before committing to a full rebuild — you want to know what's actually wrong",
+    ],
+    mailSubject: "Book Website Audit",
+  },
+  {
     id: "ai-rigor",
     title: "AI Rigor Audit",
     tagline: "For LLM, RAG, and agent systems",
+    price: "$2,500 flat",
     pitch:
       "A forensic review of an AI system or pilot: prompt design, retrieval and grounding, eval setup, hallucination behavior, cost model, and go-live readiness. You leave with a clear-eyed read on where the system is solid and where it'll break in production.",
     icon: BrainCircuit,
@@ -59,6 +80,7 @@ const skus: Sku[] = [
     id: "stats-experiment",
     title: "Stats & Experiment Audit",
     tagline: "For dashboards, A/B tests, models, and decisions",
+    price: "$2,500 flat",
     pitch:
       "A statistician's review of the data work driving your decisions: experimental design, p-values, sample sizes, confounders, model assumptions, dashboard logic. You leave knowing which numbers you can trust and which ones are quietly lying to you.",
     icon: LineChart,
@@ -107,11 +129,15 @@ const deliverables = [
 const faqs = [
   {
     q: "Why a fixed fee instead of a proposal?",
-    a: "Proposals waste both of us a week. If the diagnostic is worth $2,500, you should be able to decide that in a single email, not a procurement cycle. The whole point of this offer is to skip the friction.",
+    a: "Proposals waste both of us a week. If the audit is worth $1,500 or $2,500, you should be able to decide that in a single email, not a procurement cycle. The whole point of this offer is to skip the friction.",
   },
   {
-    q: "What does $2,500 actually buy?",
-    a: "Roughly 12–16 hours of senior work (Eric or both founders), the written report, the walkthrough, and one round of follow-up questions. We've costed this carefully — it's not a loss-leader, but it's deliberately set below where procurement gets involved.",
+    q: "What does the price actually buy?",
+    a: "Roughly 10–16 hours of senior work, the written report, the walkthrough, and one round of follow-up questions. The Website Audit ($1,500) is led by Jennye and weighted toward marketing and conversion; the AI and Stats audits ($2,500) are led by Eric and weighted toward technical depth. Both deliver the same shape of artifact.",
+  },
+  {
+    q: "How fast do you actually reply?",
+    a: "Within 12 hours, from a real human (not an autoresponder). Most days it's faster than that. We work US Pacific time but check email through the evening.",
   },
   {
     q: "How is this different from a free 'discovery call'?",
@@ -146,6 +172,10 @@ const accentClasses = {
     iconBg: "from-brand-violet/25 to-brand-purple/15",
     rule: "via-brand-violet/40",
   },
+  blue: {
+    iconBg: "from-brand-blue/25 to-brand-indigo/15",
+    rule: "via-brand-blue/40",
+  },
 } as const;
 
 export default function DiagnosticPage() {
@@ -166,14 +196,15 @@ export default function DiagnosticPage() {
                 <span className="text-gradient">No decks.</span>
               </>
             }
-            description="A fixed-fee diagnostic of your AI or statistics work, delivered as a written audit you can hand to your team. The fastest way to find out if your system actually holds up — and the lowest-friction way to start working with us."
+            description="A fixed-fee diagnostic of your website, AI, or statistics work, delivered as a written audit you can hand to your team. The fastest way to find out where your system actually holds up — and the lowest-friction way to start working with us."
           />
 
           <div className="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-3">
             {[
-              { icon: Wallet, label: "$2,500 flat" },
+              { icon: Wallet, label: "From $1,500 flat" },
               { icon: Clock, label: "One week, kickoff to walkthrough" },
               { icon: FileText, label: "8–12 page written audit" },
+              { icon: MessageCircleReply, label: "Reply within 12 hours" },
             ].map((fact) => (
               <span
                 key={fact.label}
@@ -189,14 +220,14 @@ export default function DiagnosticPage() {
 
       <section className="relative py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-3">
             {skus.map((sku, i) => {
               const Icon = sku.icon;
               const accent = accentClasses[sku.accent];
               return (
                 <div
                   key={sku.id}
-                  className="glass-card group relative flex flex-col overflow-hidden rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1"
+                  className="glass-card group relative flex flex-col overflow-hidden rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1"
                   style={{ animationDelay: `${i * 80}ms` }}
                 >
                   <div
@@ -207,11 +238,11 @@ export default function DiagnosticPage() {
                   >
                     <Icon className="h-5 w-5 text-brand-violet" />
                   </div>
-                  <h3 className="mt-5 font-display text-2xl font-semibold text-mist-50">
+                  <h3 className="mt-5 font-display text-xl font-semibold text-mist-50">
                     {sku.title}
                   </h3>
-                  <p className="mt-1 font-mono text-xs uppercase tracking-[0.22em] text-brand-violet">
-                    {sku.tagline}
+                  <p className="mt-1 font-mono text-[0.65rem] uppercase tracking-[0.22em] text-brand-violet">
+                    {sku.tagline} · {sku.price}
                   </p>
                   <p className="mt-5 text-sm leading-relaxed text-mist-200">
                     {sku.pitch}
@@ -242,7 +273,7 @@ export default function DiagnosticPage() {
                     <ChevronRight className="h-4 w-4" />
                   </a>
                   <p className="mt-3 text-center text-xs text-mist-400">
-                    Opens your email — we'll reply within one business day.
+                    Opens your email — we&apos;ll reply within 12 hours.
                   </p>
                 </div>
               );

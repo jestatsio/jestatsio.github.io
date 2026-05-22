@@ -6,58 +6,58 @@ import { BuiltProject, type BuiltProjectData } from "@/components/BuiltProject";
 const projects: BuiltProjectData[] = [
   {
     name: "Aeroza",
-    tagline: "Queryable weather intelligence",
+    tagline: "A live weather data platform",
     description:
-      "A real-time weather API and viewer: NEXRAD radar tiles materialized in seconds, geospatial polygon queries (max / mean / min) without a GIS stack, and calibrated nowcasting at 10, 30, and 60-minute horizons. Every forecast is scored against reality in public — MAE, bias, and RMSE published openly so anyone can see exactly how the models perform.",
+      "A weather platform we built and run. You can pull radar data for any region on demand, get short-range forecasts at 10, 30, and 60 minutes out, and — most importantly — see exactly how accurate our forecasts have actually been. We publish our track record in real time, so anyone can check how often we got it right and by how much. It's the kind of transparency we wish more AI products had.",
     url: "https://www.aeroza.app/",
     icon: Radar,
     accent: "indigo",
     stack: [
-      "FastAPI",
-      "NEXRAD MRMS",
-      "pySTEPS / NowcastNet",
-      "MapLibre tiles",
-      "Server-Sent Events",
+      "Real-time radar data",
+      "ML forecasting",
+      "Interactive maps",
+      "Live streaming API",
+      "Public accuracy scoring",
     ],
     proves:
-      "We can build ML systems that earn trust by scoring themselves in public — the exact rigor we bring to client AI work.",
+      "We build AI that earns trust by being transparent about its mistakes — the same standard we hold ourselves to on every client project.",
   },
   {
     name: "Bullet Lens",
     tagline: "Forensic ballistics, in the browser",
     description:
-      "An interactive 3D viewer for fired-bullet surface scans used in forensic ballistics. Stitches multi-land scans into a full bullet, extracts height profiles for algorithmic comparison, and integrates with NIST ballistic databases. Files stay local in the browser by default; optional server-side ML provides scored comparisons against reference data.",
+      "A browser-based tool used in forensic ballistics — letting investigators examine and compare the microscopic markings on fired bullets in 3D. The system stitches multiple scans into a complete bullet model, links into the national forensic database (NIST), and gives investigators a way to score how closely two bullets match. By default, everything stays on the user's computer for privacy — the cloud comparison is optional.",
     url: "https://bullet-lens.vercel.app/",
     icon: Crosshair,
     accent: "violet",
     stack: [
-      "WebGL 3D",
-      "Point-cloud processing",
-      "x3p forensic format",
-      "NIST integration",
-      "Server-side ML",
+      "3D in the browser",
+      "Geometric reconstruction",
+      "Forensic data standards",
+      "National database integration",
+      "AI scoring",
     ],
     proves:
-      "We can take on weird, hard, domain-specific problems and ship a working system end-to-end — UI, geometry, ML, and standards integration.",
+      "We can take on unusual, specialized problems and ship a complete, working product — from the interface and 3D rendering to the AI and the integration with national standards.",
   },
   {
     name: "Reolens",
-    tagline: "Native Reolink camera client for Apple platforms",
+    tagline: "A polished security-camera app for Mac, iPad, and iPhone",
     description:
-      "A modern, native client for Reolink cameras, NVRs, and Home Hubs across macOS, iPadOS, and iPhone. Live multi-camera grids, PTZ control, cross-day AI search across recorded footage, schedule editors, and rich motion notifications. Camera list syncs via iCloud while passwords stay per-device in Keychain — a privacy-by-design architecture.",
+      "A native app for Reolink security cameras across the Apple ecosystem. Watch several cameras at once, pan and zoom remotely, search through past footage with AI, get smart motion alerts, and edit recording schedules. The camera list syncs across all your devices automatically — but passwords stay safely on each device, never sent up to the cloud.",
     url: "https://reolens.io/",
     icon: Eye,
     accent: "blue",
     stack: [
-      "Swift / SwiftUI",
-      "macOS 26+ / iOS 26+",
-      "Real-time video",
+      "Native Apple apps",
+      "Mac, iPad, and iPhone",
+      "Live multi-camera video",
+      "AI footage search",
       "iCloud sync",
-      "AI search",
-      "Keychain",
+      "Privacy-first design",
     ],
     proves:
-      "We ship polished consumer products — multi-platform native UI, real-time media, privacy-conscious architecture, and ML for search.",
+      "We ship polished consumer products — apps people actually want to use, across multiple platforms, with serious attention to privacy and live-video performance.",
   },
 ];
 
