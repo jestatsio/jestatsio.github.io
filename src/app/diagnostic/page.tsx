@@ -19,11 +19,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 export const metadata: Metadata = {
   title: "The One-Week Diagnostic — J&E Statistical Consulting",
   description:
-    "A fixed-fee, one-week audit of your website, AI, or statistics work. Written report. No decks. Reply within 12 hours. From $1,500.",
+    "A fixed-fee, one-week diagnostic of your website, AI, or data work — whether you have a system to audit or you're still trying to figure out where to start. Written report. No decks. Reply within 12 hours. From $1,500.",
   openGraph: {
     title: "The One-Week Diagnostic — J&E Statistical Consulting",
     description:
-      "A fixed-fee, one-week audit of your website, AI, or statistics work. Written report. No decks. Reply within 12 hours.",
+      "A fixed-fee, one-week diagnostic of your website, AI, or data work — whether you have a system to audit or you're still figuring out where to start.",
     url: "https://jestats.io/diagnostic",
     type: "website",
   },
@@ -62,36 +62,36 @@ const skus: Sku[] = [
   {
     id: "ai-rigor",
     title: "AI Rigor Audit",
-    tagline: "For LLM, RAG, and agent systems",
+    tagline: "AI work — live, in pilot, or still on the whiteboard",
     price: "$2,500 flat",
     pitch:
-      "A forensic review of an AI system or pilot: prompt design, retrieval and grounding, eval setup, hallucination behavior, cost model, and go-live readiness. You leave with a clear-eyed read on where the system is solid and where it'll break in production.",
+      "A clear-eyed read on your AI work — wherever you are with it. If something exists, we look at where it's solid and where it'll break in production. If it doesn't yet, we look at where AI would actually move the needle for your business and what we'd build first. Either way, you leave with a written report your team and your stakeholders can both work from.",
     icon: BrainCircuit,
     accent: "indigo",
     goodFor: [
+      "We're thinking about AI but don't know where it'd actually move the needle",
+      "Evaluating an AI vendor and want an outside, technical read before signing",
       "An LLM pilot that's been stuck in 'demo mode' for months",
-      "A RAG system that gives confident but wrong answers",
-      "An AI feature shipped without a real evaluation harness",
-      "An AI roadmap you want a second, technical opinion on",
+      "An AI system in production that nobody has independently checked",
     ],
     mailSubject: "Book AI Rigor Audit",
   },
   {
     id: "stats-experiment",
-    title: "Stats & Experiment Audit",
-    tagline: "For dashboards, A/B tests, models, and decisions",
+    title: "Stats & Data Audit",
+    tagline: "Data and the decisions it drives — at any stage",
     price: "$2,500 flat",
     pitch:
-      "A statistician's review of the data work driving your decisions: experimental design, p-values, sample sizes, confounders, model assumptions, dashboard logic. You leave knowing which numbers you can trust and which ones are quietly lying to you.",
+      "Whether you already have analyses driving decisions or you're sitting on data you haven't figured out how to use — we help you turn data into something you can actually trust. If you have a dashboard, A/B test, or model, we audit it. If you don't yet, we help you scope the pipeline, pick the right metrics, and design the analyses from scratch. You leave with a written plan your team can act on.",
     icon: LineChart,
     accent: "violet",
     goodFor: [
-      "A dashboard nobody on the team fully trusts",
-      "An A/B test result that feels slippery",
-      "A model in production that no one has independently checked",
+      "Plenty of data, but no clear picture of what's worth measuring",
+      "Building (or rebuilding) a data pipeline and want it done right the first time",
+      "A dashboard or A/B test the team can't quite trust",
       "A business decision riding on a single statistical claim",
     ],
-    mailSubject: "Book Stats & Experiment Audit",
+    mailSubject: "Book Stats & Data Audit",
   },
 ];
 
@@ -127,6 +127,10 @@ const deliverables = [
 ];
 
 const faqs = [
+  {
+    q: "We don't have an AI pilot or analyses yet — is this still useful?",
+    a: "Yes. About a third of our diagnostics are early-stage — companies thinking about AI or data work but trying to figure out where it would actually pay off. We do the same shape of analysis, just looking forward (where would this move the needle, what would we build first, in what order) instead of backward (where is the existing system failing). Same price, same week, same written report.",
+  },
   {
     q: "Why a fixed fee instead of a proposal?",
     a: "Proposals waste both of us a week. If the audit is worth $1,500 or $2,500, you should be able to decide that in a single email, not a procurement cycle. The whole point of this offer is to skip the friction.",
@@ -196,7 +200,7 @@ export default function DiagnosticPage() {
                 <span className="text-gradient">No decks.</span>
               </>
             }
-            description="A fixed-fee diagnostic of your website, AI, or statistics work, delivered as a written audit you can hand to your team. The fastest way to find out where your system actually holds up — and the lowest-friction way to start working with us."
+            description="A fixed-fee diagnostic of your website, AI, or data work — whether you already have a system to audit or you're trying to figure out where to start. We meet you where you are, do the analysis in a week, and write the report your team can actually use."
           />
 
           <div className="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-3">
