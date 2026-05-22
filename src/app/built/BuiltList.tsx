@@ -42,16 +42,22 @@ const projects: BuiltProjectData[] = [
   },
   {
     name: "Reolens",
-    tagline: "Coming soon — writeup in progress",
+    tagline: "Native Reolink camera client for Apple platforms",
     description:
-      "A live product we built and own. Full description, screenshots, and tech stack landing here shortly.",
+      "A modern, native client for Reolink cameras, NVRs, and Home Hubs across macOS, iPadOS, and iPhone. Live multi-camera grids, PTZ control, cross-day AI search across recorded footage, schedule editors, and rich motion notifications. Camera list syncs via iCloud while passwords stay per-device in Keychain — a privacy-by-design architecture.",
     url: "https://reolens.io/",
     icon: Eye,
     accent: "blue",
-    stack: [],
+    stack: [
+      "Swift / SwiftUI",
+      "macOS 26+ / iOS 26+",
+      "Real-time video",
+      "iCloud sync",
+      "AI search",
+      "Keychain",
+    ],
     proves:
-      "Description forthcoming — Eric and Jennye are writing the public-facing copy.",
-    status: "in-progress",
+      "We ship polished consumer products — multi-platform native UI, real-time media, privacy-conscious architecture, and ML for search.",
   },
 ];
 

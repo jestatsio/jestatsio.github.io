@@ -134,10 +134,10 @@ export function LocalWeb() {
             </div>
           </div>
           <a
-            href="#contact"
+            href="/local-web"
             className="inline-flex shrink-0 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.02] px-5 py-3 text-sm font-medium text-mist-100 transition-colors hover:border-white/20 hover:bg-white/[0.05]"
           >
-            Get a quote
+            See pricing &amp; SKUs
           </a>
         </motion.div>
       </div>
