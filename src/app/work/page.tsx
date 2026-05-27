@@ -142,7 +142,7 @@ export default function WorkIndexPage() {
           <DiagnosticCTA
             variant="banner"
             headline="Want to be a case study?"
-            subhead="Start with a one-week diagnostic. Most engagements produce something we can write about — anonymized at your call."
+            subhead="Start with a free audit. Most engagements that follow produce something we can write about — anonymized at your call."
           />
         </div>
       </section>

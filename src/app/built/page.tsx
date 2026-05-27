@@ -58,16 +58,16 @@ export default function BuiltPage() {
                   <span className="text-gradient">client engagements.</span>
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-mist-300 sm:text-base">
-                  AI audits, statistical reviews, RAG and LLM builds, custom
-                  tooling. Start with a one-week diagnostic — fixed fee, written
-                  report, no decks.
+                  Web development, AI audits, statistical reviews, RAG and LLM
+                  builds, custom tooling. Start with a free written audit — no
+                  call required, no obligation, yours to keep.
                 </p>
               </div>
               <a
                 href="/diagnostic"
                 className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-brand-indigo to-brand-purple px-6 py-3 text-sm font-medium text-white shadow-md shadow-brand-indigo/20 transition-transform hover:scale-[1.03]"
               >
-                See the diagnostic
+                Get your free audit
               </a>
             </div>
           </div>

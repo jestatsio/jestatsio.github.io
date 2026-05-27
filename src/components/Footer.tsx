@@ -2,13 +2,13 @@ import Link from "next/link";
 import { LogoMark } from "./LogoMark";
 
 const links = [
-  { href: "/diagnostic", label: "Diagnostic" },
+  { href: "/diagnostic", label: "Free audits" },
+  { href: "/local-web", label: "Web development" },
   { href: "/built", label: "Built" },
   { href: "/work", label: "Case studies" },
   { href: "/blog", label: "Writing" },
   { href: "/healthcare", label: "Healthcare" },
   { href: "/legal-ai", label: "Legal" },
-  { href: "/local-web", label: "Local web" },
   { href: "/lake-stevens", label: "Lake Stevens" },
 ];
 

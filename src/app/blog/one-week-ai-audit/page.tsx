@@ -168,8 +168,8 @@ export default function OneWeekAIAuditPost() {
         <div className="mx-auto max-w-3xl px-6">
           <DiagnosticCTA
             variant="banner"
-            headline="Want this run against your AI pilot?"
-            subhead="The full one-week AI Rigor Audit. Fixed fee, written report, no decks. Reply within 12 hours."
+            headline="Want a read on your AI pilot?"
+            subhead="Start with the free AI Starter Audit — a written take, no call required. If the stakes need the full week-long rigor audit, that option's there too."
           />
         </div>
       </section>

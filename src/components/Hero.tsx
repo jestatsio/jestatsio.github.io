@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { LogoMark } from "./LogoMark";
 
 const pressurePoints = [
-  "Dashboards nobody trusts",
+  "A website that's slow, dated, or quietly losing leads",
   "AI pilots stuck in demo mode",
-  "Too much data, not enough signal",
+  "Dashboards nobody trusts",
 ];
 
 const focusAreas = [
@@ -52,7 +52,7 @@ export function Hero() {
               transition={{ duration: 0.65, delay: 0.08, ease: "easeOut" }}
               className="mt-8 font-mono text-xs uppercase tracking-[0.3em] text-mist-400"
             >
-              PhD-led statistics + AI systems
+              Web dev · AI · Statistics — PhD-led
             </motion.p>
 
             <motion.h1
@@ -61,9 +61,9 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.14, ease: "easeOut" }}
               className="mt-5 font-display text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-mist-50 sm:text-6xl md:text-7xl lg:text-[5.75rem]"
             >
-              Statistics.
+              Free audit.
               <br />
-              AI.
+              Real fixes.
               <br />
               <span className="text-gradient">No hand-waving.</span>
             </motion.h1>
@@ -74,9 +74,10 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.22, ease: "easeOut" }}
               className="mt-8 max-w-xl text-lg leading-relaxed text-mist-300 sm:text-xl"
             >
-              We help small and growing teams turn messy data, shaky experiments,
-              and half-formed AI ideas into systems that actually hold up in the
-              real world.
+              We&apos;ll audit your website, AI work, or data — for free — and
+              send you a written report with what&apos;s broken and what to fix
+              first. No call required. No sales pitch. Hire us only if the
+              findings convince you.
             </motion.p>
 
             <motion.div
@@ -86,17 +87,18 @@ export function Hero() {
               className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
             >
               <a
-                href="#contact"
+                href="/diagnostic"
                 className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-indigo to-brand-purple px-6 py-3 text-base font-medium text-white shadow-lg shadow-brand-indigo/25 transition-transform hover:scale-[1.03]"
               >
-                Start a conversation
+                <Sparkles className="h-4 w-4" />
+                Get your free audit
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
               <a
-                href="#signals"
+                href="#services"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.02] px-6 py-3 text-base font-medium text-mist-100 transition-colors hover:border-white/20 hover:bg-white/[0.05]"
               >
-                See the signals
+                See what we build
               </a>
             </motion.div>
 

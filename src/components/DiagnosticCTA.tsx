@@ -1,23 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, FileText, Wallet } from "lucide-react";
+import { ArrowRight, Clock, FileText, Sparkles } from "lucide-react";
 
 interface DiagnosticCTAProps {
   variant?: "card" | "banner";
   headline?: string;
   subhead?: string;
+  eyebrow?: string;
+  ctaLabel?: string;
 }
 
 export function DiagnosticCTA({
   variant = "card",
-  headline = "Start with a one-week diagnostic.",
-  subhead = "Fixed scope. Fixed fee. Written report. No decks.",
+  headline = "Start with a free audit.",
+  subhead = "Real written findings, not a sales call. No retainer. No catch.",
+  eyebrow = "Free audit",
+  ctaLabel = "Get your free audit",
 }: DiagnosticCTAProps) {
   const facts = [
-    { icon: Wallet, label: "$2,500 flat" },
-    { icon: Clock, label: "One week" },
-    { icon: FileText, label: "Written report + walkthrough" },
+    { icon: Sparkles, label: "Free — no strings" },
+    { icon: Clock, label: "Days, not weeks" },
+    { icon: FileText, label: "Written report you keep" },
   ];
 
   if (variant === "banner") {
@@ -32,7 +36,7 @@ export function DiagnosticCTA({
         <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div className="max-w-xl">
             <div className="font-mono text-[0.6rem] uppercase tracking-[0.24em] text-brand-violet">
-              Productized engagement
+              {eyebrow}
             </div>
             <h3 className="mt-2 font-display text-xl font-semibold text-mist-50 sm:text-2xl">
               {headline}
@@ -56,7 +60,7 @@ export function DiagnosticCTA({
             href="/diagnostic"
             className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-brand-indigo to-brand-purple px-5 py-3 text-sm font-medium text-white shadow-md shadow-brand-indigo/20 transition-transform hover:scale-[1.03]"
           >
-            See the diagnostic
+            {ctaLabel}
             <ArrowRight className="h-4 w-4" />
           </a>
         </div>
@@ -73,7 +77,7 @@ export function DiagnosticCTA({
       className="glass-card rounded-2xl p-7"
     >
       <div className="font-mono text-[0.6rem] uppercase tracking-[0.24em] text-brand-violet">
-        Productized engagement
+        {eyebrow}
       </div>
       <h3 className="mt-2 font-display text-xl font-semibold text-mist-50">
         {headline}
@@ -94,7 +98,7 @@ export function DiagnosticCTA({
         href="/diagnostic"
         className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-indigo to-brand-purple px-5 py-3 text-sm font-medium text-white shadow-md shadow-brand-indigo/20 transition-transform hover:scale-[1.03]"
       >
-        See the diagnostic
+        {ctaLabel}
         <ArrowRight className="h-4 w-4" />
       </a>
     </motion.div>

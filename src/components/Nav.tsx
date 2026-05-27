@@ -26,13 +26,13 @@ const servicesSections: NavSection[] = [
     items: [
       {
         href: "/diagnostic",
-        label: "The Diagnostic",
-        description: "Fixed-fee audits & roadmaps in a week — from $1,500",
+        label: "Free Audits",
+        description: "Free written audits of your site, AI, or data — days, not weeks",
       },
       {
         href: "/local-web",
-        label: "Local Web",
-        description: "WordPress & Elementor builds, rescues, care plans",
+        label: "Web Development",
+        description: "Modern websites — fast, owned, built to convert",
       },
     ],
   },
@@ -173,10 +173,10 @@ export function Nav() {
 
           <div className="flex items-center gap-3">
             <Link
-              href="/#contact"
+              href="/diagnostic"
               className="hidden rounded-lg bg-gradient-to-r from-brand-indigo to-brand-purple px-4 py-2 text-sm font-medium text-white shadow-md shadow-brand-indigo/20 transition-transform hover:scale-[1.03] md:inline-flex"
             >
-              Let&apos;s talk
+              Free audit
             </Link>
             <button
               type="button"
@@ -305,10 +305,10 @@ function MobileMenu() {
       </div>
       <div className="px-4 py-4">
         <Link
-          href="/#contact"
+          href="/diagnostic"
           className="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-brand-indigo to-brand-purple px-4 py-2.5 text-sm font-medium text-white shadow-md shadow-brand-indigo/20"
         >
-          Let&apos;s talk
+          Free audit
         </Link>
       </div>
     </div>
