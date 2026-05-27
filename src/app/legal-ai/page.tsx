@@ -174,8 +174,8 @@ export default function LegalAIPage() {
         <div className="mx-auto max-w-5xl px-6">
           <DiagnosticCTA
             variant="banner"
-            headline="Start with a legal AI or document-system audit."
-            subhead="One week. Fixed fee. Written report you can hand to partners, IT, or vendors. No slides."
+            headline="Start with a free legal AI audit."
+            subhead="A free written audit of your legal AI or document system — what's solid, what'll break, and what to fix first. No call, no decks, no obligation."
           />
         </div>
       </section>

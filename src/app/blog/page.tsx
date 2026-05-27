@@ -163,7 +163,7 @@ export default function BlogIndexPage() {
           <DiagnosticCTA
             variant="banner"
             headline="Ready to put any of this to work?"
-            subhead="Start with a one-week diagnostic. Same rigor as the writing. Yours in a week."
+            subhead="Start with a free written audit. Same rigor as the writing — yours to read, no call required."
           />
         </div>
       </section>

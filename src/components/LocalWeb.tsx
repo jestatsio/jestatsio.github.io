@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import {
+  Code2,
   Gauge,
   Hammer,
   KeyRound,
@@ -26,28 +27,40 @@ const audience = [
 
 const features = [
   {
-    icon: Gauge,
-    title: "Fast, found, finished.",
+    icon: Code2,
+    title: "Modern stack, real engineers.",
     description:
-      "Modern stack, instant page loads, and the local-SEO basics actually wired up — schema, sitemap, Google Business — so customers searching at 9pm on a Tuesday can find you.",
+      "We build the way good software gets built — Next.js or WordPress + Elementor depending on what fits, version-controlled, properly typed, properly tested. No drag-and-drop spaghetti, no AI-generated mush. The codebase is something a working developer would actually be happy to inherit.",
+  },
+  {
+    icon: Gauge,
+    title: "Genuinely fast.",
+    description:
+      "Pages load in well under a second on real phones, not just on a flattering test rig. Lighthouse scores in the 90s, Core Web Vitals in the green, images and fonts optimized properly. Speed is the cheapest UX upgrade you can buy — and a lot of sites quietly skip it.",
   },
   {
     icon: Phone,
     title: "Built to convert, not to decorate.",
     description:
-      "Click-to-call on every page, clear quote forms, service areas, hours, real photos. The goal is more booked jobs, not more bounce.",
+      "Click-to-call on every page, clear quote forms, service areas, hours, real photos. Search basics (schema, sitemaps, Google Business) wired up properly. The goal is more booked jobs, not more bounce.",
   },
   {
     icon: KeyRound,
     title: "You own everything.",
     description:
-      "Your domain, your code, your content, your inbox. No CMS we control, no proprietary builder, no platform that holds your site hostage when the bill arrives.",
+      "Your domain, your code, your content, your inbox. No CMS we control, no proprietary builder, no platform that holds your site hostage when the bill arrives. Walk away anytime and the site walks with you.",
   },
   {
     icon: Receipt,
     title: "Pay once, mostly.",
     description:
-      "One flat build, then a small monthly for hosting and care — or none at all if you'd rather host it yourself. No retainer, no surprise upsells, no eight-page agency contract.",
+      "One flat build, then a small monthly for hosting and care if you want it — or none at all if you'd rather host it yourself. No retainer, no surprise upsells, no eight-page agency contract.",
+  },
+  {
+    icon: Hammer,
+    title: "Rebuilds, not band-aids.",
+    description:
+      "If your current site is slow, dated, or held together with plugin duct tape, we rebuild it properly — and 301-redirect everything so you don't lose what you already have. Sometimes the right answer is to start clean.",
   },
 ];
 
@@ -56,14 +69,14 @@ export function LocalWeb() {
     <section id="local-web" className="relative py-28 sm:py-36">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          eyebrow="Also on the menu"
+          eyebrow="Web development"
           title={
             <>
-              Websites for the businesses that{" "}
+              Modern websites for the businesses that{" "}
               <span className="text-gradient">keep towns running.</span>
             </>
           }
-          description="Outside of the AI and stats work, we build modern, fast, conversion-focused websites for local trades and small businesses — no agency markup, no template bloat, no subscriptions you can't escape."
+          description="Real web development — modern stack, properly engineered, owned by you — for local businesses and small teams. We pick the right tool for the job: Next.js when it earns its keep, WordPress + Elementor when that's the better fit. No agency markup, no template bloat, no subscriptions you can't escape."
         />
 
         <motion.div
@@ -124,21 +137,30 @@ export function LocalWeb() {
             </div>
             <div>
               <div className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-brand-violet">
-                Plain pricing
+                Start with a free audit
               </div>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-mist-200 sm:text-base">
-                Most local sites land between a single flat fee for a focused
-                build and a small monthly for hosting and care. We&apos;ll quote
-                the number on the first call — no proposals, no decks.
+                Already have a site? Get a free written audit first —
+                what&apos;s slow, what&apos;s leaking leads, and what we&apos;d
+                fix before anything else. Then decide whether a rebuild makes
+                sense.
               </p>
             </div>
           </div>
-          <a
-            href="/local-web"
-            className="inline-flex shrink-0 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.02] px-5 py-3 text-sm font-medium text-mist-100 transition-colors hover:border-white/20 hover:bg-white/[0.05]"
-          >
-            See pricing &amp; SKUs
-          </a>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="/diagnostic"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-brand-indigo to-brand-purple px-5 py-3 text-sm font-medium text-white shadow-md shadow-brand-indigo/20 transition-transform hover:scale-[1.03]"
+            >
+              Free website audit
+            </a>
+            <a
+              href="/local-web"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.02] px-5 py-3 text-sm font-medium text-mist-100 transition-colors hover:border-white/20 hover:bg-white/[0.05]"
+            >
+              See build options
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

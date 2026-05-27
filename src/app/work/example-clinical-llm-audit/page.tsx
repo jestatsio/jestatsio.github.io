@@ -120,7 +120,7 @@ export default function ExampleCaseStudyPage() {
           <DiagnosticCTA
             variant="banner"
             headline="Want this kind of writeup on your system?"
-            subhead="Start with a one-week diagnostic. Same format. Real findings. Yours to keep — or to anonymize and publish."
+            subhead="Start with a free audit — same format, real findings, yours to keep. The deeper paid version is there if the stakes need it."
           />
         </div>
       </section>

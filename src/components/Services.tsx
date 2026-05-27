@@ -1,28 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BrainCircuit, LineChart, Wrench } from "lucide-react";
+import { BrainCircuit, Code2, LineChart } from "lucide-react";
 import { DiagnosticCTA } from "./DiagnosticCTA";
 import { SectionHeading } from "./SectionHeading";
 
 const services = [
   {
+    icon: Code2,
+    title: "Web Development",
+    description:
+      "Fast, modern websites built for the businesses behind them. We work in both modern stacks (Next.js, custom React) and WordPress + Elementor — picking the one that fits the job, not the one we'd rather sell. Speed, ownership, and conversion over agency theater.",
+  },
+  {
     icon: BrainCircuit,
-    title: "AI Infrastructure",
+    title: "AI Systems",
     description:
       "Design and deploy production-grade LLM pipelines, RAG systems, and AI agents. We build on modern frameworks — LangChain, LangGraph, OpenAI, Anthropic — with the rigor of a stats PhD behind every decision.",
   },
   {
     icon: LineChart,
-    title: "Data Analysis & Statistics",
+    title: "Data & Statistics",
     description:
       "From experimental design to Bayesian modeling to causal inference. We translate business questions into statistical ones — and back into answers you can act on.",
-  },
-  {
-    icon: Wrench,
-    title: "AI Tools & Integration",
-    description:
-      "Custom internal tools, automations, and dashboards that plug AI into the workflows your team already uses. No AI theater — just practical leverage.",
   },
 ];
 
@@ -35,10 +35,10 @@ export function Services() {
           title={
             <>
               What we build once the{" "}
-              <span className="text-gradient">problem is clear.</span>
+              <span className="text-gradient">audit is clear.</span>
             </>
           }
-          description="We keep the menu short on purpose. The work tends to fall into three buckets, and we go deep on each one."
+          description="The free audit tells you what's worth doing. These are the three things we build once you decide to act on it. Short menu, deep work."
         />
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -68,8 +68,8 @@ export function Services() {
         <div className="mt-14">
           <DiagnosticCTA
             variant="banner"
-            headline="Not sure where to start? Begin with the diagnostic."
-            subhead="A one-week, fixed-fee audit of your AI or stats work. Written report you can hand to your team — no decks, no proposals."
+            headline="Not sure where to start? Get a free audit."
+            subhead="We'll review your website, AI work, or data — for free — and send a written report with what's broken and what to fix first. No decks, no sales call, no obligation."
           />
         </div>
       </div>

@@ -10,30 +10,29 @@ import {
   LineChart,
   Mail,
   MessageCircleReply,
-  Wallet,
+  Sparkles,
 } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "The One-Week Diagnostic — J&E Statistical Consulting",
+  title: "Free Audits — J&E Statistical Consulting",
   description:
-    "A fixed-fee, one-week diagnostic of your website, AI, or data work — whether you have a system to audit or you're still trying to figure out where to start. Written report. No decks. Reply within 12 hours. From $1,500.",
+    "Free written audits of your website, AI work, or data. Real findings, no sales call, no obligation. Written report in days. Hire us only if you like what you read.",
   openGraph: {
-    title: "The One-Week Diagnostic — J&E Statistical Consulting",
+    title: "Free Audits — J&E Statistical Consulting",
     description:
-      "A fixed-fee, one-week diagnostic of your website, AI, or data work — whether you have a system to audit or you're still figuring out where to start.",
+      "Free written audits of your website, AI work, or data. Real findings, no sales call, no obligation.",
     url: "https://jestats.io/diagnostic",
     type: "website",
   },
 };
 
-interface Sku {
+interface FreeSku {
   id: string;
   title: string;
   tagline: string;
-  price: string;
   pitch: string;
   icon: typeof BrainCircuit;
   accent: "indigo" | "violet" | "blue";
@@ -41,129 +40,163 @@ interface Sku {
   mailSubject: string;
 }
 
-const skus: Sku[] = [
+const freeSkus: FreeSku[] = [
   {
     id: "website",
-    title: "Website Audit",
+    title: "Free Website Audit",
     tagline: "For your existing site",
-    price: "$1,500 flat",
     pitch:
-      "A practical, written review of your existing website. We look at how fast it loads, how well it ranks in search, how clearly it guides visitors toward becoming customers, how it feels on a phone, and the maintenance basics most sites quietly let slip. You get a clear list of what's broken, what's costing you traffic or leads, and exactly what we'd fix first.",
+      "A practical, written review of your existing website. We look at load speed, how it feels on a phone, how clearly it guides visitors toward becoming customers, the build quality underneath, and the basics most sites quietly let slip. You get a clear, ranked list of what to fix and what to fix first.",
     icon: Gauge,
     accent: "blue",
     goodFor: [
       "A site that loads slowly and you don't know why",
       "Plenty of visitors, but very few of them turn into leads",
       "A WordPress install nobody has touched in two years",
-      "Before committing to a full rebuild — you want to know what's actually wrong",
+      "Before committing to a rebuild — you want to know what's actually wrong",
     ],
-    mailSubject: "Book Website Audit",
+    mailSubject: "Free Website Audit — request",
   },
   {
-    id: "ai-rigor",
-    title: "AI Rigor Audit",
-    tagline: "AI work — live, in pilot, or still on the whiteboard",
-    price: "$2,500 flat",
+    id: "ai-starter",
+    title: "Free AI Starter Audit",
+    tagline: "A first technical read on your AI work",
     pitch:
-      "A clear-eyed read on your AI work — wherever you are with it. If something exists, we look at where it's solid and where it'll break in production. If it doesn't yet, we look at where AI would actually move the needle for your business and what we'd build first. Either way, you leave with a written report your team and your stakeholders can both work from.",
+      "A short, written take on the AI work you're doing — or thinking about doing. We look at what's solid, what's likely to break in production, and where AI would actually move the needle for your business. Not a sales call dressed up as advice — a real document you can hand to your team.",
     icon: BrainCircuit,
     accent: "indigo",
     goodFor: [
-      "We're thinking about AI but don't know where it'd actually move the needle",
-      "Evaluating an AI vendor and want an outside, technical read before signing",
-      "An LLM pilot that's been stuck in 'demo mode' for months",
-      "An AI system in production that nobody has independently checked",
+      "Thinking about AI but unsure where it'd actually pay off",
+      "Evaluating an AI vendor and want an outside technical read",
+      "An LLM pilot stuck in 'demo mode' for months",
+      "A simple system in production nobody has independently checked",
     ],
-    mailSubject: "Book AI Rigor Audit",
+    mailSubject: "Free AI Starter Audit — request",
   },
   {
-    id: "stats-experiment",
-    title: "Stats & Data Audit",
-    tagline: "Data and the decisions it drives — at any stage",
-    price: "$2,500 flat",
+    id: "stats-starter",
+    title: "Free Stats Starter Audit",
+    tagline: "A first read on your data work",
     pitch:
-      "Whether you already have analyses driving decisions or you're sitting on data you haven't figured out how to use — we help you turn data into something you can actually trust. If you have a dashboard, A/B test, or model, we audit it. If you don't yet, we help you scope the pipeline, pick the right metrics, and design the analyses from scratch. You leave with a written plan your team can act on.",
+      "A short, written take on the data and decisions driving your business. If you have a dashboard, A/B test, or model, we give you our first read. If you don't yet, we tell you what you'd want to measure first. Either way, you leave with a document — not a meeting recap.",
     icon: LineChart,
     accent: "violet",
     goodFor: [
-      "Plenty of data, but no clear picture of what's worth measuring",
-      "Building (or rebuilding) a data pipeline and want it done right the first time",
+      "Plenty of data, no clear picture of what's worth measuring",
       "A dashboard or A/B test the team can't quite trust",
       "A business decision riding on a single statistical claim",
+      "Wondering whether what you have is actually useful",
     ],
+    mailSubject: "Free Stats Starter Audit — request",
+  },
+];
+
+interface PaidSku {
+  id: string;
+  title: string;
+  tagline: string;
+  price: string;
+  pitch: string;
+  icon: typeof BrainCircuit;
+  mailSubject: string;
+}
+
+const paidSkus: PaidSku[] = [
+  {
+    id: "ai-rigor",
+    title: "AI Rigor Audit",
+    tagline: "Deep, week-long technical audit",
+    price: "$2,500 flat",
+    pitch:
+      "The full one-week version. We replicate findings, test edge cases, sanity-check assumptions, and put your system through the kind of independent review a board, buyer, or regulator can rely on. 8–12 page report, walkthrough call, replication notebooks.",
+    icon: BrainCircuit,
+    mailSubject: "Book AI Rigor Audit",
+  },
+  {
+    id: "stats-deep",
+    title: "Stats & Data Audit",
+    tagline: "Deep, week-long statistical audit",
+    price: "$2,500 flat",
+    pitch:
+      "The full one-week version. We dig into experiment design, modeling choices, causal claims, and the analyses driving decisions. 8–12 page report, walkthrough call, replication notebooks — defensible enough to put in front of a stakeholder who isn't already convinced.",
+    icon: LineChart,
     mailSubject: "Book Stats & Data Audit",
   },
 ];
 
-const week = [
+const cadence = [
   {
-    day: "Day 1",
-    title: "Kickoff",
-    body: "60-min call. We align on the question, scope, and access. You send code, data samples, dashboards, prompts — whatever fits the audit.",
+    day: "Day 0",
+    title: "You send us a link or a few files",
+    body: "One email. Tell us what you'd like a read on — a URL, a repo, a dashboard, a doc. We confirm within 12 hours and tell you what we'll need.",
   },
   {
-    day: "Days 2–4",
-    title: "Deep work",
-    body: "We dig in. Read the code, run the math, replicate findings, test edge cases, sanity-check assumptions. We surface questions over email or Slack as they come up.",
+    day: "Days 1–3",
+    title: "We actually look at it",
+    body: "Real review by a real human. We poke around, run the basics, sanity-check the parts that matter. No automated scan report copy-pasted into a PDF.",
   },
   {
-    day: "Day 5",
-    title: "Draft report",
-    body: "An 8–12 page written audit: what's working, what's broken, severity of each finding, and concrete next steps. Sent as a PDF — no slides.",
+    day: "Day 3–5",
+    title: "Written audit lands in your inbox",
+    body: "A short written audit (3–5 pages for the free tier) — what's working, what's broken, severity-ranked findings, and the first things we'd fix. PDF. Yours to keep. No slides.",
   },
   {
-    day: "Day 6–7",
-    title: "Walkthrough",
-    body: "60-min walkthrough with your team. Q&A, prioritization, scoping any follow-on work. Recording yours to keep.",
+    day: "After",
+    title: "Hire us, or don't",
+    body: "If the findings convince you, we'll scope a build or a deeper paid audit. If they don't, you've still got a written technical opinion to use however you want. No follow-up emails unless you ask.",
   },
 ];
 
 const deliverables = [
-  "8–12 page written audit (PDF) — written, not slide-decked",
+  "Short written audit (3–5 pages for free; 8–12 for paid) — written, not slide-decked",
   "Severity-ranked findings with concrete remediation steps",
-  "Replication notebook or code snippets where relevant",
-  "60-minute walkthrough call (recorded, yours to keep)",
-  "Follow-on engagement scope if it makes sense — no pressure",
+  "Links, screenshots, or code snippets where they make the point clearer",
+  "Reply to one round of follow-up questions over email",
+  "Honest answer on whether we'd be the right fit for the fix — or whether you can do it yourselves",
 ];
 
 const faqs = [
   {
-    q: "We don't have an AI pilot or analyses yet — is this still useful?",
-    a: "Yes. About a third of our diagnostics are early-stage — companies thinking about AI or data work but trying to figure out where it would actually pay off. We do the same shape of analysis, just looking forward (where would this move the needle, what would we build first, in what order) instead of backward (where is the existing system failing). Same price, same week, same written report.",
+    q: "Wait — actually free? What's the catch?",
+    a: "Actually free. No card, no call required, no scoping deck, no '15-minute discovery' that turns into 45. The catch, if there is one, is that we hope you'll like the audit enough to hire us for the fix. If you don't, you keep the audit anyway — and we move on without follow-up emails.",
   },
   {
-    q: "Why a fixed fee instead of a proposal?",
-    a: "Proposals waste both of us a week. If the audit is worth $1,500 or $2,500, you should be able to decide that in a single email, not a procurement cycle. The whole point of this offer is to skip the friction.",
+    q: "Why give away something most consultants charge for?",
+    a: "Because most consultants' first deliverable is a proposal, and proposals are useless. A written audit is a real artifact you can act on — and it's a better sales pitch for us than any deck. We'd rather you read our actual work than our marketing copy.",
   },
   {
-    q: "What does the price actually buy?",
-    a: "Roughly 10–16 hours of senior work, the written report, the walkthrough, and one round of follow-up questions. The Website Audit ($1,500) is led by Jennye and weighted toward marketing and conversion; the AI and Stats audits ($2,500) are led by Eric and weighted toward technical depth. Both deliver the same shape of artifact.",
+    q: "How is this different from a 'discovery call'?",
+    a: "A discovery call gives you a sales pitch and a vague follow-up. A free audit gives you a written, defensible technical opinion you can hand to your team — whether or not you hire us. Same effort on our side, dramatically more useful for you.",
+  },
+  {
+    q: "What's the difference between the free Starter audits and the paid $2,500 ones?",
+    a: "Depth and defensibility. The free Starter audits are an honest first read — 3–5 pages, a few hours of senior time. They surface the obvious wins and the real risks. The paid AI and Stats audits ($2,500) are a full week of work — replication, edge cases, written rationale at the level a board, buyer, or regulator will accept. Most clients start with the free one and decide from there.",
   },
   {
     q: "How fast do you actually reply?",
-    a: "Within 12 hours, from a real human (not an autoresponder). Most days it's faster than that. We work US Pacific time but check email through the evening.",
-  },
-  {
-    q: "How is this different from a free 'discovery call'?",
-    a: "A discovery call gives you a sales pitch. A diagnostic gives you a written, defensible technical opinion you can hand to your team. You pay because you should — and because that's what makes us write it honestly.",
+    a: "Within 12 hours, from a real human (not an autoresponder). Most days it's faster. Reports typically land within 3–5 business days of you sending us what we need.",
   },
   {
     q: "What if you find nothing wrong?",
-    a: "Then the report says so, in writing, with the reasoning. That's a useful thing to hand to a board or a buyer. We'd rather tell you everything is fine than invent problems.",
+    a: "Then the audit says so, in writing, with the reasoning. That's a useful thing to hand to a board or a buyer too. We'd rather tell you everything is fine than invent problems to sell a fix.",
   },
   {
-    q: "What if we want you to fix what you find?",
-    a: "We'll scope a follow-on engagement if it makes sense for both sides. Roughly 30–40% of diagnostics turn into a build or retainer. There's no pressure — and the diagnostic stands on its own either way.",
+    q: "What if we want you to do the fix?",
+    a: "Then we'll scope a build or a follow-on engagement. For websites, that's usually a flat-fee build or rebuild. For AI and stats work, we'll quote the engagement on a single email. No proposal phase, no procurement theater.",
   },
   {
     q: "Do you sign NDAs?",
-    a: "Yes. Standard mutual NDA, no negotiation theater. If you have your own template, we'll sign it the same day.",
+    a: "Yes. Standard mutual NDA, signed same day. If you have your own template, we'll sign it.",
+  },
+  {
+    q: "Is there a limit on how big a system you'll look at for free?",
+    a: "Yes, roughly. The free audit is a few hours of senior work, so giant codebases or sprawling AI platforms get a high-level read, not a line-by-line review. If you have something larger, the paid audit gives it the time it actually needs — but the free Starter tells you whether that's worth doing first.",
   },
 ];
 
 function buildMailto(subject: string): string {
   const body =
-    "Hi Eric and Jennye,%0D%0A%0D%0AI'd like to book the following diagnostic:%0D%0A%0D%0A- Company:%0D%0A- What we want audited (short description):%0D%0A- Ideal start date:%0D%0A%0D%0AThanks!";
+    "Hi Eric and Jennye,%0D%0A%0D%0AI'd like to request the following:%0D%0A%0D%0A- Company:%0D%0A- What you'd like a read on (URL, repo, doc, dashboard, etc.):%0D%0A- Anything specific you're worried about:%0D%0A%0D%0AThanks!";
   return `mailto:info@jestats.io?subject=${encodeURIComponent(subject)}&body=${body}`;
 }
 
@@ -193,21 +226,21 @@ export default function DiagnosticPage() {
 
         <div className="relative mx-auto max-w-6xl px-6">
           <SectionHeading
-            eyebrow="Productized engagement"
+            eyebrow="Free audits"
             title={
               <>
-                One week. Written report.{" "}
-                <span className="text-gradient">No decks.</span>
+                A written audit of your work —{" "}
+                <span className="text-gradient">free.</span>
               </>
             }
-            description="A fixed-fee diagnostic of your website, AI, or data work — whether you already have a system to audit or you're trying to figure out where to start. We meet you where you are, do the analysis in a week, and write the report your team can actually use."
+            description="Send us your website, your AI pilot, or your data work. We'll send back a real written audit — what's broken, what's costing you, and what to fix first. No call required. No retainer. No catch. Hire us only if the findings convince you."
           />
 
           <div className="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-3">
             {[
-              { icon: Wallet, label: "From $1,500 flat" },
-              { icon: Clock, label: "One week, kickoff to walkthrough" },
-              { icon: FileText, label: "8–12 page written audit" },
+              { icon: Sparkles, label: "Free — no strings" },
+              { icon: Clock, label: "Written report in days" },
+              { icon: FileText, label: "PDF you keep, decks you don't get" },
               { icon: MessageCircleReply, label: "Reply within 12 hours" },
             ].map((fact) => (
               <span
@@ -225,7 +258,7 @@ export default function DiagnosticPage() {
       <section className="relative py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-6 md:grid-cols-3">
-            {skus.map((sku, i) => {
+            {freeSkus.map((sku, i) => {
               const Icon = sku.icon;
               const accent = accentClasses[sku.accent];
               return (
@@ -237,16 +270,22 @@ export default function DiagnosticPage() {
                   <div
                     className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent ${accent.rule} to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
                   />
-                  <div
-                    className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${accent.iconBg} ring-1 ring-inset ring-white/10`}
-                  >
-                    <Icon className="h-5 w-5 text-brand-violet" />
+                  <div className="flex items-start justify-between gap-4">
+                    <div
+                      className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${accent.iconBg} ring-1 ring-inset ring-white/10`}
+                    >
+                      <Icon className="h-5 w-5 text-brand-violet" />
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-violet/30 bg-brand-violet/10 px-2.5 py-1 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-brand-violet">
+                      <Sparkles className="h-3 w-3" />
+                      Free
+                    </span>
                   </div>
                   <h3 className="mt-5 font-display text-xl font-semibold text-mist-50">
                     {sku.title}
                   </h3>
                   <p className="mt-1 font-mono text-[0.65rem] uppercase tracking-[0.22em] text-brand-violet">
-                    {sku.tagline} · {sku.price}
+                    {sku.tagline}
                   </p>
                   <p className="mt-5 text-sm leading-relaxed text-mist-200">
                     {sku.pitch}
@@ -273,7 +312,7 @@ export default function DiagnosticPage() {
                     href={buildMailto(sku.mailSubject)}
                     className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-indigo to-brand-purple px-5 py-3 text-sm font-medium text-white shadow-md shadow-brand-indigo/20 transition-transform hover:scale-[1.03]"
                   >
-                    Book this audit
+                    Request — it&apos;s free
                     <ChevronRight className="h-4 w-4" />
                   </a>
                   <p className="mt-3 text-center text-xs text-mist-400">
@@ -289,18 +328,18 @@ export default function DiagnosticPage() {
       <section className="relative py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
-            eyebrow="How the week runs"
+            eyebrow="How it runs"
             title={
               <>
-                Seven days, end to end —{" "}
+                Days, not weeks —{" "}
                 <span className="text-gradient">no mystery.</span>
               </>
             }
-            description="The same shape every time. You always know what's happening this week and when the report lands."
+            description="The same shape every time. You always know what's happening and when the report lands."
           />
 
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {week.map((step, i) => (
+            {cadence.map((step, i) => (
               <div
                 key={step.day}
                 className="glass-card relative overflow-hidden rounded-2xl p-6"
@@ -335,7 +374,7 @@ export default function DiagnosticPage() {
                   What you actually get
                 </h3>
                 <p className="mt-1 text-sm text-mist-400">
-                  Five concrete deliverables, every engagement.
+                  Same shape, every audit.
                 </p>
               </div>
             </div>
@@ -351,6 +390,58 @@ export default function DiagnosticPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-20 sm:py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHeading
+            eyebrow="When the free one isn't enough"
+            title={
+              <>
+                Deeper audits, when the stakes{" "}
+                <span className="text-gradient">need them.</span>
+              </>
+            }
+            description="The free Starter audits handle most situations. When the answer has to survive a board, a buyer, or a regulator — these are the longer, defensible versions."
+          />
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {paidSkus.map((sku) => {
+              const Icon = sku.icon;
+              return (
+                <div
+                  key={sku.id}
+                  className="glass-card group relative overflow-hidden rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-indigo/25 to-brand-purple/15 ring-1 ring-inset ring-white/10">
+                      <Icon className="h-5 w-5 text-brand-violet" />
+                    </div>
+                    <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-mist-200">
+                      {sku.price}
+                    </span>
+                  </div>
+                  <h3 className="mt-5 font-display text-xl font-semibold text-mist-50">
+                    {sku.title}
+                  </h3>
+                  <p className="mt-1 font-mono text-[0.65rem] uppercase tracking-[0.22em] text-brand-violet">
+                    {sku.tagline}
+                  </p>
+                  <p className="mt-5 text-sm leading-relaxed text-mist-200">
+                    {sku.pitch}
+                  </p>
+                  <a
+                    href={buildMailto(sku.mailSubject)}
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-brand-violet transition-colors hover:text-mist-50"
+                  >
+                    Book this audit
+                    <ChevronRight className="h-4 w-4" />
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -397,17 +488,17 @@ export default function DiagnosticPage() {
                   Ready when you are
                 </div>
                 <h3 className="mt-3 font-display text-2xl font-semibold text-mist-50 sm:text-3xl">
-                  Book a diagnostic, or{" "}
+                  Request your free audit, or{" "}
                   <span className="text-gradient">just say hello.</span>
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-mist-300 sm:text-base">
-                  Not sure which SKU fits? Send a one-line description of what
-                  you'd want audited and we'll point you to the right one — or
-                  tell you honestly that this isn't the right fit.
+                  Not sure which one fits? Send a one-line description of what
+                  you&apos;d want looked at and we&apos;ll point you to the right
+                  one — or tell you honestly that this isn&apos;t the right fit.
                 </p>
               </div>
               <a
-                href="mailto:info@jestats.io?subject=Question%20about%20the%20diagnostic"
+                href="mailto:info@jestats.io?subject=Question%20about%20the%20free%20audit"
                 className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-brand-indigo to-brand-purple px-6 py-3 text-sm font-medium text-white shadow-md shadow-brand-indigo/20 transition-transform hover:scale-[1.03]"
               >
                 <Mail className="h-4 w-4" />

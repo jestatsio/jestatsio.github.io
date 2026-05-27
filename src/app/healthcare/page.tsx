@@ -173,8 +173,8 @@ export default function HealthcarePage() {
         <div className="mx-auto max-w-5xl px-6">
           <DiagnosticCTA
             variant="banner"
-            headline="Start with a clinical AI or stats audit."
-            subhead="One week. Fixed fee. Written report your compliance and clinical reviewers can read. No slides."
+            headline="Start with a free clinical AI or stats audit."
+            subhead="A free written audit of your clinical AI or stats work — what's defensible, what isn't, and what to address first. No call, no decks, no obligation."
           />
         </div>
       </section>
