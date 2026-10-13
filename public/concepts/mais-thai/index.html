@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mai's Thai Cuisine — Marysville, WA (Concept)</title>
+<meta name="description" content="Family-owned Thai and Vietnamese restaurant in Marysville, WA for over 30 years. Lunch specials, pho, pad thai, and bubble tea at Prime Square on State Avenue.">
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --navy:#1b2f6e; --navy-deep:#12204d; --red:#b3232a; --red-dark:#8e1a20;
+    --gold:#e9b949; --ink:#23272f; --muted:#5c6470; --paper:#fffdf7; --line:#e7e0cf;
+  }
+  *{box-sizing:border-box}
+  img{max-width:100%}
+  .hero .wrap>*,.story>*,.visit>*{min-width:0}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+  h1,h2,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:600;line-height:1.15}
+  a{color:var(--navy)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .concept-bar{background:var(--navy-deep);color:#fff;font-size:.8rem;letter-spacing:.02em}
+  .concept-bar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+  .concept-bar strong{color:var(--gold);font-weight:700}
+  header.site{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+  header.site .wrap{display:flex;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px}
+  .brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--ink)}
+  .brand .mai{font-family:Georgia,serif;font-style:italic;color:var(--red);font-size:1.5rem}
+  .brand .thai{font-family:Georgia,serif;font-weight:700;color:var(--navy);font-size:1.35rem;letter-spacing:.04em;text-transform:uppercase}
+  nav.main{margin-left:auto;display:flex;gap:18px;align-items:center}
+  nav.main a{text-decoration:none;font-size:.95rem;color:var(--ink)}
+  nav.main a:hover{color:var(--red)}
+  .btn{display:inline-block;border-radius:8px;padding:11px 18px;text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid transparent}
+  .btn-call{background:var(--red);color:#fff}
+  .btn-call:hover{background:var(--red-dark)}
+  .btn-ghost{border-color:var(--navy);color:var(--navy);background:#fff}
+  .hero{background:var(--navy);color:#fff}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding-top:36px;padding-bottom:36px}
+  .hero p.kicker{color:var(--gold);font-size:.85rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
+  .hero h1{font-size:2.15rem;margin:0 0 14px}
+  .hero p.lede{color:#dbe2f7;margin:0 0 20px;font-size:1.05rem}
+  .hero .ctas{display:flex;gap:10px;flex-wrap:wrap}
+  .hero .btn-ghost{background:transparent;color:#fff;border-color:#fff}
+  .hero figure{margin:0}
+  .hero img{width:100%;height:340px;object-fit:cover;object-position:center 30%;border-radius:10px;display:block}
+  .hero figcaption{font-size:.78rem;color:#aebadd;margin-top:6px}
+  .rating{display:inline-flex;gap:8px;align-items:center;background:#fff;color:var(--ink);border-radius:999px;padding:6px 12px;font-size:.88rem;font-weight:600;margin-bottom:16px}
+  .rating .stars{color:var(--gold);letter-spacing:.08em}
+  .lunch{background:var(--red);color:#fff}
+  .lunch .wrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
+  .lunch .price{font-family:Georgia,serif;font-size:2rem;font-weight:700}
+  .lunch p{margin:0;flex:1;min-width:240px}
+  .lunch .btn{background:#fff;color:var(--red-dark)}
+  section{padding:44px 0}
+  section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  h2{font-size:1.65rem;margin:0 0 8px;color:var(--navy-deep)}
+  .sub{color:var(--muted);margin:0 0 24px;max-width:62ch}
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .dish{border:1px solid var(--line);border-radius:10px;padding:16px;background:var(--paper)}
+  .dish h3{margin:0 0 4px;font-size:1.02rem;display:flex;justify-content:space-between;gap:10px}
+  .dish h3 .p{color:var(--red);font-weight:700;white-space:nowrap}
+  .dish p{margin:0;color:var(--muted);font-size:.92rem}
+  .spice{margin-top:18px;font-size:.9rem;color:var(--muted)}
+  .spice strong{color:var(--ink)}
+  .story{display:grid;grid-template-columns:.95fr 1.05fr;gap:28px;align-items:center}
+  .story img{width:100%;height:320px;object-fit:cover;object-position:center 25%;border-radius:10px;display:block}
+  .story ul{margin:14px 0 0;padding-left:18px;color:var(--muted)}
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .visit dl{margin:0;display:grid;grid-template-columns:110px 1fr;row-gap:8px}
+  .visit dt{font-weight:700;color:var(--navy-deep)}
+  .visit dd{margin:0}
+  footer{background:var(--navy-deep);color:#c6cfeb;font-size:.88rem}
+  footer .wrap{padding-top:26px;padding-bottom:30px;display:grid;gap:8px}
+  footer strong{color:#fff}
+  .mobilebar{display:none}
+  @media (max-width:760px){
+    .hero .wrap,.story,.visit{grid-template-columns:1fr}
+    .menu-grid{grid-template-columns:1fr}
+    .hero img{height:250px}
+    nav.main{display:none}
+    .brand .mai{font-size:1.25rem}
+    .brand .thai{font-size:1.05rem}
+    .mobilebar{display:flex;position:sticky;bottom:0;z-index:6;background:#fff;border-top:1px solid var(--line)}
+    .mobilebar a{flex:1;text-align:center;padding:13px 8px;text-decoration:none;font-weight:700}
+    .mobilebar a:first-child{background:var(--red);color:#fff}
+    .mobilebar a:last-child{color:var(--navy)}
+    body{padding-bottom:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  <div class="wrap">
+    <span><strong>Concept</strong> — homepage concept prepared for Mai's Thai by J&amp;E Stats. Not the restaurant's official site.</span>
+    <span>Marysville, WA</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Mai's Thai Cuisine home">
+      <span class="mai">Mai's</span><span class="thai">Thai Cuisine</span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#favorites">Favorites</a>
+      <a href="#story">Our story</a>
+      <a href="#visit">Hours &amp; directions</a>
+      <a class="btn btn-call" href="tel:+13606534165">Call (360) 653-4165</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <p class="kicker">Thai &amp; Vietnamese · Prime Square, State Avenue</p>
+        <span class="rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.5 on Google · 260 reviews</span>
+        <h1>Family-owned Thai &amp; Vietnamese in Marysville for over 30 years.</h1>
+        <p class="lede">Pho, pad thai, curries, and bubble tea from a family kitchen on State Avenue — the kind of place regulars bring their parents to.</p>
+        <div class="ctas">
+          <a class="btn btn-call" href="tel:+13606534165">Call to order</a>
+          <a class="btn btn-ghost" href="#favorites">See favorites</a>
+        </div>
+      </div>
+      <figure>
+        <img src="img/interior.jpg" alt="The dining room at Mai's Thai, with red tablecloths and hand-painted fans on the wall" width="1600" height="1200">
+        <figcaption>Inside Mai's Thai on State Avenue.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="lunch">
+    <div class="wrap">
+      <span class="price">$12.95</span>
+      <p><strong>Lunch special, served daily until 3:00 PM.</strong><br>Full lunch and dinner menus, with spice from mild to very hot — your call.</p>
+      <a class="btn" href="tel:+13606534165">Order lunch</a>
+    </div>
+  </div>
+
+  <section id="favorites">
+    <div class="wrap">
+      <h2>House favorites</h2>
+      <p class="sub">Straight off the current menu. Most entrees come with your choice of chicken, pork, beef, or tofu — prawns when you want them.</p>
+      <div class="menu-grid">
+        <article class="dish"><h3>Pad Thai <span class="p">$16.95</span></h3><p>Stir-fried rice noodles, ground peanuts, eggs, onions, and fresh bean sprouts. With prawns, add $4.00.</p></article>
+        <article class="dish"><h3>Pho <span class="p">$14.95+</span></h3><p>Rice noodles, onions, and cilantro in a beef broth. Steak, combo, seafood, or vegetable tofu.</p></article>
+        <article class="dish"><h3>Tom Yum <span class="p">$18.95</span></h3><p>Hot and sour soup with mushrooms, lemongrass, basil, and Thai spices. Prawns or a seafood combo if you are hungry.</p></article>
+        <article class="dish"><h3>Panang Curry <span class="p">$18.95</span></h3><p>Chicken or beef sauteed in curry paste with coconut milk, baby corn, fresh basil, onions, and bamboo shoots.</p></article>
+        <article class="dish"><h3>Spring Rolls <span class="p">$8.95</span></h3><p>Eight mini vegetable spring rolls with cabbage, carrot, and bean thread noodles, plus house cucumber sauce.</p></article>
+        <article class="dish"><h3>Banh Mi <span class="p">$8.95</span></h3><p>BBQ pork, chicken, beef, or tofu on a baguette with pickled carrots and daikon, jalapeno, and cilantro.</p></article>
+      </div>
+      <p class="spice"><strong>Pick your heat:</strong> * Mild &nbsp; ** Medium &nbsp; *** Hot &nbsp; **** Very hot. Bubble tea, Thai iced tea, and Singha on the drinks list.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="story">
+    <div class="wrap story">
+      <img src="img/storefront.jpg" alt="The Mai's Thai Cuisine storefront at Prime Square, with hand-painted windows advertising pho, bubble tea, and lunch specials" width="1200" height="1600" loading="lazy">
+      <div>
+        <h2>A Marysville fixture since before State Ave filled in</h2>
+        <p class="sub" style="margin-bottom:0">Family owned and operated for over 30 years, Mai's Thai built its name on bold Thai and Vietnamese flavors and the kind of welcome that turns first-timers into regulars. You will find us in Prime Square, next to La Terraza — look for the hand-painted windows.</p>
+        <ul>
+          <li>Lunch specials every day until 3:00 PM</li>
+          <li>Pho, banh mi, and bubble tea alongside the Thai classics</li>
+          <li>Takeout by phone, delivery through DoorDash</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap visit">
+      <div>
+        <h2>Visit us</h2>
+        <dl>
+          <dt>Address</dt><dd>9501 State Ave, Ste F<br>Marysville, WA 98270</dd>
+          <dt>Hours</dt><dd>Mon–Sat: 11:00 AM – 9:00 PM<br>Sunday: Closed</dd>
+          <dt>Phone</dt><dd><a href="tel:+13606534165">(360) 653-4165</a></dd>
+          <dt>Delivery</dt><dd>DoorDash, or call for pickup</dd>
+        </dl>
+      </div>
+      <div>
+        <h2>Find the door</h2>
+        <p class="sub">Prime Square on State Avenue, just north of 88th St NE. Free parking right out front — Suite F, under the blue Thai Cuisine sign.</p>
+        <p><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Mai%27s+Thai+Cuisine+9501+State+Ave+Marysville+WA" target="_blank" rel="noreferrer">Get directions</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><strong>Mai's Thai Cuisine</strong> · 9501 State Ave, Ste F, Marysville, WA 98270 · (360) 653-4165</span>
+    <span>Concept homepage prepared by J&amp;E Stats for Mai's Thai. Menu, prices, and hours from the restaurant's current site, October 2026 — call to confirm. Photos from the restaurant's own website.</span>
+  </div>
+</footer>
+
+<div class="mobilebar" aria-label="Quick actions">
+  <a href="tel:+13606534165">Call to order</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Mai%27s+Thai+Cuisine+9501+State+Ave+Marysville+WA" target="_blank" rel="noreferrer">Directions</a>
+</div>
+
+</body>
+</html>
