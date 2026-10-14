@@ -67,6 +67,11 @@ const workSections: NavSection[] = [
         description: "Live products we've shipped",
       },
       {
+        href: "/concepts",
+        label: "State Avenue, Rebuilt",
+        description: "Local homepage concepts, before & after",
+      },
+      {
         href: "/work",
         label: "Case studies",
         description: "Engagement writeups",

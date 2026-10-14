@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Terraza — Mexican Restaurant, Marysville, WA (Concept)</title>
+<meta name="description" content="Family Mexican restaurant at Prime Square on State Avenue in Marysville, WA. Birria, pozole, carnitas, and handmade favorites, open seven days.">
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --brick:#9c3a1e; --brick-deep:#7c2c14; --verde:#2e5339; --verde-deep:#1f3a28;
+    --oro:#c79a2e; --ink:#2d2419; --muted:#72654f; --paper:#fdf8ec; --sand:#f5ead0;
+    --line:#e4d5b4; --hair:#d5c08e;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:17px;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,.serif{font-family:Georgia,"Times New Roman",Times,serif}
+  a{color:var(--verde)}
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--oro);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  .skip{position:absolute;left:-9999px;top:0;background:#fff;padding:8px 14px;z-index:20}
+  .skip:focus{left:8px;top:8px}
+
+  .concept-bar{background:var(--verde-deep);color:#cfe0d2;font-size:.78rem}
+  .concept-bar .wrap{display:flex;justify-content:space-between;gap:10px 18px;padding-top:7px;padding-bottom:7px;flex-wrap:wrap}
+  .concept-bar strong{color:#fff;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.72rem}
+
+  header.site{background:var(--paper);position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line)}
+  header.site .wrap{display:flex;align-items:center;gap:16px;padding-top:13px;padding-bottom:13px}
+  .brand{display:flex;align-items:baseline;gap:9px;text-decoration:none;color:var(--ink)}
+  .brand .la{font-family:Georgia,serif;font-style:italic;font-weight:700;color:var(--brick);font-size:1.3rem;line-height:1}
+  .brand .terraza{font-family:Georgia,serif;font-weight:700;color:var(--verde-deep);font-size:1.45rem;letter-spacing:.05em;text-transform:uppercase;line-height:1}
+  nav.main{margin-left:auto;display:flex;gap:20px;align-items:center}
+  nav.main a{text-decoration:none;font-size:.94rem;color:var(--ink)}
+  nav.main a:not(.btn):hover{color:var(--brick);text-decoration:underline;text-underline-offset:3px}
+
+  /* papel picado strip — cut-paper scallops, kept quiet */
+  .picado{height:14px;background:
+    radial-gradient(circle at 10px -4px, transparent 12px, var(--brick) 13px);
+    background-size:28px 14px;background-repeat:repeat-x;opacity:.9}
+  .picado.verde{background:radial-gradient(circle at 10px -4px, transparent 12px, var(--verde) 13px);background-size:28px 14px}
+
+  .btn{display:inline-block;border-radius:999px;padding:12px 22px;text-decoration:none;font-weight:700;font-size:.96rem}
+  .btn-call{background:var(--brick);color:#fff;box-shadow:0 1px 0 var(--brick-deep)}
+  .btn-call:hover{background:var(--brick-deep)}
+  .link-more{font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--oro);text-decoration-thickness:2px}
+  .link-more:hover{color:var(--brick)}
+
+  .hero{border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;padding-top:42px;padding-bottom:44px}
+  .hero .where{font-family:Georgia,serif;font-style:italic;color:var(--brick);font-size:1.02rem;margin:0 0 8px}
+  .hero h1{font-size:2.6rem;font-weight:600;line-height:1.12;letter-spacing:-.01em;margin:0 0 14px;color:var(--verde-deep)}
+  .hero h1 em{color:var(--brick)}
+  .hero p.lede{color:#50432f;margin:0 0 18px;font-size:1.06rem;max-width:45ch}
+  .hero .rating-line{font-size:.92rem;color:var(--muted);margin:0 0 22px}
+  .hero .rating-line .stars{color:var(--oro);letter-spacing:.12em}
+  .hero .rating-line strong{color:var(--ink)}
+  .hero .ctas{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+
+  /* no stock photos — a set menu card instead */
+  .special-card{border:1.5px solid var(--hair);border-radius:3px;background:#fffdf4;padding:26px 28px;position:relative}
+  .special-card::before{content:"";position:absolute;top:9px;left:9px;right:-9px;bottom:-9px;border:1px solid var(--oro);border-radius:3px;z-index:-1}
+  .special-card h2{font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;color:var(--verde);margin:0 0 14px;font-weight:700}
+  .special-card li{margin:0 0 10px;color:#50432f;font-size:.98rem}
+  .special-card ul{margin:0;padding-left:18px}
+  .special-card .foot{font-family:Georgia,serif;font-style:italic;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:12px;margin-top:16px}
+
+  .lunch{background:var(--brick-deep);color:#fdeed9;border-top:1px solid #5e2010;border-bottom:1px solid #5e2010}
+  .lunch .wrap{display:flex;align-items:baseline;gap:14px 20px;flex-wrap:wrap;padding-top:16px;padding-bottom:16px}
+  .lunch .price{font-family:Georgia,serif;font-size:1.9rem;font-weight:700;font-variant-numeric:tabular-nums;color:#fff}
+  .lunch p{margin:0;flex:1;min-width:250px;font-size:.99rem}
+  .lunch p strong{color:#fff}
+  .lunch .btn{background:#fff;color:var(--brick-deep);padding:10px 20px}
+  .lunch .btn:hover{background:var(--sand)}
+
+  section{padding:46px 0}
+  h2.sec{font-size:1.8rem;font-weight:600;line-height:1.2;margin:0 0 8px;color:var(--verde-deep)}
+  h2.sec em{color:var(--brick)}
+  .sub{color:var(--muted);margin:0 0 26px;max-width:60ch}
+
+  .menu-list{display:grid;grid-template-columns:1fr 1fr;column-gap:52px;row-gap:22px;margin:0;padding:0;list-style:none}
+  .dish .line{display:flex;align-items:baseline;gap:8px}
+  .dish h3{margin:0;font-family:Georgia,serif;font-weight:700;font-size:1.12rem;color:var(--ink)}
+  .dish .dots{flex:1;border-bottom:2px dotted var(--hair);transform:translateY(-4px)}
+  .dish .p{font-family:Georgia,serif;font-weight:700;color:var(--brick);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .dish p{margin:3px 0 0;color:var(--muted);font-size:.94rem;max-width:42ch}
+  .spice{margin:28px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:.93rem;color:var(--muted);font-family:Georgia,serif;font-style:italic}
+  .spice strong{color:var(--ink);font-style:normal}
+
+  .story-sec{background:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .story p{color:#50432f;margin:0 0 14px}
+  .story blockquote{margin:0;font-family:Georgia,serif;font-style:italic;font-size:1.18rem;line-height:1.5;color:var(--verde-deep);border-left:3px solid var(--oro);padding-left:18px}
+  .story blockquote footer{font-size:.88rem;font-style:normal;font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--muted);margin-top:10px}
+  .story ul{margin:16px 0 0;padding:0;list-style:none}
+  .story li{padding:8px 0 8px 22px;position:relative;border-top:1px solid var(--line);color:#50432f;font-size:.98rem}
+  .story li::before{content:"—";position:absolute;left:0;color:var(--brick);font-weight:700}
+
+  .visit{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+  .visit dl{margin:0}
+  .visit .row{display:flex;gap:16px;padding:11px 0;border-top:1px solid var(--line)}
+  .visit .row:first-of-type{border-top:0;padding-top:2px}
+  .visit dt{flex:0 0 92px;font-weight:700;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;color:var(--verde);padding-top:2px}
+  .visit dd{margin:0}
+  .visit .note{font-family:Georgia,serif;font-style:italic;color:#50432f;font-size:1.02rem;margin:0 0 18px}
+  .btn-ghost{display:inline-block;border:1.5px solid var(--verde);color:var(--verde);border-radius:999px;padding:11px 22px;text-decoration:none;font-weight:700;font-size:.95rem;background:transparent}
+  .btn-ghost:hover{background:var(--verde);color:#fff}
+
+  footer.site-f{background:var(--verde-deep);color:#c3d6c8;font-size:.87rem}
+  footer.site-f .wrap{padding-top:26px;padding-bottom:32px;display:grid;gap:6px}
+  footer.site-f strong{color:#fff;font-family:Georgia,serif;font-size:.98rem}
+  footer.site-f .fine{font-style:italic;font-family:Georgia,serif}
+  .mobilebar{display:none}
+
+  @media (max-width:760px){
+    body{font-size:16.5px}
+    .hero .wrap,.story,.visit{grid-template-columns:1fr}
+    .hero h1{font-size:2.1rem}
+    .hero .wrap{padding-top:30px;padding-bottom:34px;gap:26px}
+    .menu-list{grid-template-columns:1fr;row-gap:18px}
+    nav.main{display:none}
+    .brand .la{font-size:1.1rem}
+    .brand .terraza{font-size:1.2rem}
+    .mobilebar{display:flex;position:sticky;bottom:0;z-index:6;background:#fff;border-top:1px solid var(--line)}
+    .mobilebar a{flex:1;text-align:center;padding:14px 8px;text-decoration:none;font-weight:700}
+    .mobilebar a:first-child{background:var(--brick);color:#fff}
+    .mobilebar a:last-child{color:var(--verde)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+
+<div class="concept-bar">
+  <div class="wrap">
+    <span><strong>Concept</strong> &nbsp;Homepage concept prepared for La Terraza by J&amp;E Stats — not the restaurant's official site.</span>
+    <span>Marysville, WA</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="La Terraza home">
+      <span class="la">La</span><span class="terraza">Terraza</span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#favorites">Favorites</a>
+      <a href="#story">Our story</a>
+      <a href="#visit">Hours &amp; directions</a>
+      <a class="btn btn-call" href="tel:+13606536717">Call (360) 653-6717</a>
+    </nav>
+  </div>
+  <div class="picado" aria-hidden="true"></div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <p class="where">Mexican kitchen, Prime Square on State Avenue</p>
+        <h1>Birria, pozole, and carnitas — <em>hecho en casa</em> in Marysville.</h1>
+        <p class="lede">Family-run Mexican restaurant at Prime Square. Tacos de birria, pozole, chile rellenos, sopes. Open seven days.</p>
+        <p class="rating-line"><span class="stars" aria-hidden="true">★★★★★</span> <strong>4.5</strong> from about 300 reviews</p>
+        <div class="ctas">
+          <a class="btn btn-call" href="tel:+13606536717">Call to order</a>
+          <a class="link-more" href="https://www.doordash.com/en/store/la-terraza-marysville-119595/" target="_blank" rel="noreferrer">Order on DoorDash</a>
+        </div>
+      </div>
+      <div class="special-card">
+        <h2>From the kitchen</h2>
+        <ul>
+          <li><strong>Tacos de birria</strong>, with consommé</li>
+          <li><strong>Pozole and menudo</strong></li>
+          <li><strong>Pollo a la crema</strong></li>
+          <li><strong>Asada &amp; shrimp fajitas</strong>, seafood enchiladas, tacos vampiros</li>
+        </ul>
+        <p class="foot">Dine in, call ahead for pickup, or order delivery.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="lunch">
+    <div class="wrap">
+      <span class="price">$11.99</span>
+      <p><strong>Lunch plates, seven days.</strong> Two enchiladas, grilled chicken tacos, and more — full menu at lunch and dinner.</p>
+      <a class="btn" href="tel:+13606536717">Order lunch</a>
+    </div>
+  </div>
+
+  <section id="favorites">
+    <div class="wrap">
+      <h2 class="sec">House <em>favorites</em></h2>
+      <p class="sub">From the menu. Lunch and dinner. Ask about daily specials.</p>
+      <ul class="menu-list">
+        <li class="dish"><div class="line"><h3>Tacos de Birria (4)</h3><span class="dots" aria-hidden="true"></span><span class="p">$15.99</span></div><p>Slow-stewed birria in crisped tortillas, consommé for dipping.</p></li>
+        <li class="dish"><div class="line"><h3>Pozole</h3><span class="dots" aria-hidden="true"></span><span class="p">$19.99</span></div><p>Hominy soup, fixings on the side.</p></li>
+        <li class="dish"><div class="line"><h3>Pork Carnitas Plate</h3><span class="dots" aria-hidden="true"></span><span class="p">$19.99</span></div><p>Carnitas with rice, beans, and warm tortillas.</p></li>
+        <li class="dish"><div class="line"><h3>Chile Relleno Plate</h3><span class="dots" aria-hidden="true"></span><span class="p">$17.99</span></div><p>“So far, THE best chile relleno.” — from a review</p></li>
+        <li class="dish"><div class="line"><h3>Sopes</h3><span class="dots" aria-hidden="true"></span><span class="p">$16.99</span></div><p>Thick handmade sopes with your choice of meat, beans, lettuce, and crema.</p></li>
+        <li class="dish"><div class="line"><h3>Enchiladas Mexicanas</h3><span class="dots" aria-hidden="true"></span><span class="p">$14.99</span></div><p>House enchiladas the traditional way. Verdes on the lunch menu, too.</p></li>
+      </ul>
+      <p class="spice"><strong>Also on the menu:</strong> chilaquiles, huaraches, torta ahogada, carne en su jugo, fish tacos, and a full run of combination plates.</p>
+    </div>
+  </section>
+
+  <section class="story-sec" id="story">
+    <div class="wrap story">
+      <div>
+        <h2 class="sec">A small dining room in <em>Prime Square</em></h2>
+        <p>Small dining room, private booths, fast service even when busy. We're in Prime Square, next door to Mai's Thai.</p>
+        <ul>
+          <li>Open seven days, lunch and dinner</li>
+          <li>Vegetarian and vegan options on the menu</li>
+          <li>Dine in, call ahead for pickup, or <a href="https://www.doordash.com/en/store/la-terraza-marysville-119595/" target="_blank" rel="noreferrer">DoorDash</a> delivery</li>
+        </ul>
+      </div>
+      <blockquote>
+        “Staff was attentive and accommodating, food was fantastic! Definitely coming back!”
+        <footer>— a recent review, one of about 300</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap visit">
+      <div>
+        <h2 class="sec">Visit <em>us</em></h2>
+        <dl>
+          <div class="row"><dt>Address</dt><dd>9501 State Ave<br>Marysville, WA 98270</dd></div>
+          <div class="row"><dt>Hours</dt><dd>Mon–Thu: 11:00 AM – 8:30 PM<br>Fri: 11:00 AM – 9:00 PM<br>Sat: 10:00 AM – 9:00 PM<br>Sun: 10:00 AM – 8:00 PM</dd></div>
+          <div class="row"><dt>Phone</dt><dd><a href="tel:+13606536717">(360) 653-6717</a></dd></div>
+          <div class="row"><dt>Takeout</dt><dd>Call ahead for pickup, or order on <a href="https://www.doordash.com/en/store/la-terraza-marysville-119595/" target="_blank" rel="noreferrer">DoorDash</a></dd></div>
+        </dl>
+      </div>
+      <div>
+        <h2 class="sec">Find the <em>door</em></h2>
+        <p class="note">Prime Square on State Avenue, just north of 88th St NE. Free parking right out front — we're in the same plaza as Mai's Thai.</p>
+        <p style="margin:0"><a class="btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=La+Terraza+9501+State+Ave+Marysville+WA" target="_blank" rel="noreferrer">Get directions</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="picado verde" aria-hidden="true"></div>
+<footer class="site-f">
+  <div class="wrap">
+    <span><strong>La Terraza</strong> &nbsp;·&nbsp; 9501 State Ave, Marysville, WA 98270 &nbsp;·&nbsp; (360) 653-6717</span>
+    <span class="fine">Concept homepage prepared by J&amp;E Stats for La Terraza. Menu, prices, and hours gathered from public listings, October 2026 — call to confirm. Final photography to come from the restaurant.</span>
+  </div>
+</footer>
+
+<div class="mobilebar" aria-label="Quick actions">
+  <a href="tel:+13606536717">Call to order</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=La+Terraza+9501+State+Ave+Marysville+WA" target="_blank" rel="noreferrer">Directions</a>
+</div>
+
+</body>
+</html>
