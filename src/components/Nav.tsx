@@ -68,7 +68,7 @@ const workSections: NavSection[] = [
       },
       {
         href: "/concepts",
-        label: "State Avenue, Rebuilt",
+        label: "Close to Home, Rebuilt",
         description: "Local homepage concepts, before & after",
       },
       {

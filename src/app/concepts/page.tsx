@@ -8,11 +8,11 @@ import { Nav } from "@/components/Nav";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "State Avenue, Rebuilt — local website concepts by J&E",
+  title: "Close to Home, Rebuilt — local website concepts by J&E",
   description:
     "Homepage concepts for Snohomish County businesses whose reviews outrun their websites. Each concept is free for the business to keep — built first, pitched second.",
   openGraph: {
-    title: "State Avenue, Rebuilt — J&E Statistical Consulting",
+    title: "Close to Home, Rebuilt — J&E Statistical Consulting",
     description:
       "Before-and-after homepage concepts for local businesses in Marysville and Lake Stevens, WA.",
     url: "https://jestats.io/concepts",
@@ -57,15 +57,21 @@ const concepts: Concept[] = [
       "The https address on their listings fails outright — the server has no working TLS, so browsers stop at a security error. Get past that and the homepage is the ordering vendor's unfinished setup screen: no menu, no hours, and a call button for the vendor's sales line, not the restaurant. Meanwhile about 300 reviews say the birria is worth the drive; a Yelp reviewer asked where the menu is.",
     fix: "The concept answers that reviewer: favorites with prices, seven-day hours, and tap-to-call on the first screen — in the restaurant's own colors, ready for their photos.",
   },
+  {
+    name: "LJ's Bistro & Bar",
+    kind: "Bistro & craft cocktail bar",
+    place: "91st Ave NE, Lake Stevens",
+    href: "/concepts/ljs-bistro/",
+    beforeSrc: "/concepts/ljs-bistro/before-mobile.png",
+    afterSrc: "/concepts/ljs-bistro/after-mobile.png",
+    auditTitle: "What a phone sees today",
+    audit:
+      "Lake Stevens' date-night spot — 4.7 stars across 1,700+ reviews — opens on a phone with a giant HOURS poster. No food, no rating, and the menu, reservations, and online ordering all wait below the fold. The hours themselves run together (“MON |TUES | THURS 3PM - 9PM”), the Wednesday closure is easy to miss, and the web menu carries no prices, deferring to Toast.",
+    fix: "The concept leads with their own bar photography, the 4.7 rating, and Reserve (Resy) and Order online (Toast) buttons. Hours become a plain table, Wednesday included, and a sample of the seasonal menu sits on the page instead of behind a tab.",
+  },
 ];
 
 const upcoming = [
-  {
-    name: "LJ's Bistro & Bar",
-    kind: "Restaurant & bar",
-    place: "Lake Stevens",
-    note: "Closest to home. Concept scheduled next.",
-  },
   {
     name: "Masterbrush Painting",
     kind: "Painting contractor",
@@ -93,10 +99,10 @@ export default function ConceptsPage() {
             eyebrow="Local concepts"
             title={
               <>
-                State Avenue, <span className="text-gradient">Rebuilt.</span>
+                Close to home, <span className="text-gradient">Rebuilt.</span>
               </>
             }
-            description="Some of the best-reviewed businesses in Snohomish County have websites that undersell them — or none at all. So we build the homepage first and hand it over, no strings. Every concept below is the business's to keep, win or lose."
+            description="Some of the best-reviewed businesses in Snohomish County have websites that undersell them — or none at all. So we build the homepage first and hand it over, no strings. It started with two neighbors in one Marysville plaza; every concept below is the business's to keep, win or lose."
           />
         </div>
       </section>
@@ -166,10 +172,10 @@ export default function ConceptsPage() {
             On the bench
           </h3>
           <p className="mt-2 max-w-prose text-sm leading-relaxed text-mist-300 sm:text-base">
-            We work in batches of five. These three are researched and waiting
+            We work in batches of five. These two are researched and waiting
             for their concepts.
           </p>
-          <div className="mt-6 grid gap-5 md:grid-cols-3">
+          <div className="mt-6 grid max-w-3xl gap-5 md:grid-cols-2">
             {upcoming.map((item) => (
               <div key={item.name} className="glass-card rounded-2xl p-6 opacity-85">
                 <div className="flex flex-wrap items-center gap-3 font-mono text-[0.6rem] uppercase tracking-[0.22em]">
