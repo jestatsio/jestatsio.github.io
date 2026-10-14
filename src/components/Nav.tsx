@@ -67,7 +67,7 @@ const workSections: NavSection[] = [
         description: "Live products we've shipped",
       },
       {
-        href: "/concepts",
+        href: "https://jestats.io/concepts/",
         label: "Close to Home, Rebuilt",
         description: "Local homepage concepts, before & after",
       },
