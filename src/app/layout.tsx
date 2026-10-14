@@ -1,57 +1,28 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "J&E Statistical Consulting — Statistics. AI. No hand-waving.",
+  title: "J&E Stats has moved to jestats.io",
   description:
-    "PhD-led statistics and AI consulting for teams that need trustworthy analysis, practical automation, and systems that hold up in the real world.",
+    "This site has moved. J&E Stats — data, websites, print and social, and AI services in Snohomish County — now lives at jestats.io.",
   metadataBase: new URL("https://jestats.io"),
-  icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-  },
-  openGraph: {
-    title: "J&E Statistical Consulting",
-    description:
-      "PhD-led statistics and AI consulting for teams that need trustworthy analysis and working systems.",
-    url: "https://jestats.io",
-    siteName: "J&E Statistical Consulting",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "J&E Statistical Consulting",
-    description:
-      "PhD-led statistics and AI consulting for teams that need trustworthy analysis and working systems.",
-  },
+  robots: { index: false, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <head>
-        <script
-          defer
-          data-domain="jestats.io"
-          src="https://plausible.io/js/script.js"
-        />
-      </head>
-      <body>{children}</body>
+    <html lang="en">
+      <body
+        style={{
+          margin: 0,
+          fontFamily:
+            "Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif",
+          background: "#FAF9F5",
+          color: "#111827",
+        }}
+      >
+        {children}
+      </body>
     </html>
   );
 }
